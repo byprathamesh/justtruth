@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <!-- White Background -->
+    <rect width="400" height="300" fill="#FFFFFF"/>
+    
+    <!-- Just Text -->
+    <text x="100" y="160" font-family="Arial" font-size="48" font-weight="bold" fill="#000000">Just</text>
+    
+    <!-- Truth Text -->
+    <text x="200" y="160" font-family="Arial" font-size="48" font-weight="bold" fill="#FFA500">Truth</text>
+</svg> 

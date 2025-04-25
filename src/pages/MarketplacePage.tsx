@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
@@ -70,7 +69,10 @@ const MarketplacePage: React.FC = () => {
                 {justBrandProducts.map((product, idx) => (
                   <ProductCard 
                     key={product.id} 
-                    product={product}
+                    product={{
+                      ...product,
+                      image: "/images/just-placeholder.svg"
+                    }}
                     className="animate-slide-in opacity-0 bg-white hover:shadow-xl transition-all duration-300"
                     style={{ animationDelay: `${idx * 0.05}s`, animationFillMode: 'forwards' }}
                   />
@@ -83,7 +85,10 @@ const MarketplacePage: React.FC = () => {
                 {freshProducts.map((product, idx) => (
                   <ProductCard 
                     key={product.id} 
-                    product={product}
+                    product={{
+                      ...product,
+                      image: "/images/just-placeholder.svg"
+                    }}
                     className="animate-slide-in opacity-0 bg-white hover:shadow-xl transition-all duration-300"
                     style={{ animationDelay: `${idx * 0.05}s`, animationFillMode: 'forwards' }}
                   />
@@ -96,7 +101,10 @@ const MarketplacePage: React.FC = () => {
                 {householdProducts.map((product, idx) => (
                   <ProductCard 
                     key={product.id} 
-                    product={product}
+                    product={{
+                      ...product,
+                      image: "/images/just-placeholder.svg"
+                    }}
                     className="animate-slide-in opacity-0 bg-white hover:shadow-xl transition-all duration-300"
                     style={{ animationDelay: `${idx * 0.05}s`, animationFillMode: 'forwards' }}
                   />
@@ -139,9 +147,9 @@ const MarketplacePage: React.FC = () => {
             <div className="md:w-1/2">
               <div className="relative">
                 <img 
-                  src="/placeholder.svg" 
+                  src="/images/just-placeholder.svg" 
                   alt="JustTrue Products" 
-                  className="rounded-lg w-full h-64 object-cover shadow-lg transition-transform duration-300 hover:scale-105"
+                  className="rounded-lg w-full h-64 object-contain shadow-lg transition-transform duration-300 hover:scale-105"
                 />
                 <div className="absolute -bottom-4 -left-4 bg-black text-white px-4 py-2 rounded-lg">
                   <span className="font-medium">Just ingredients you can trust</span>
@@ -163,9 +171,9 @@ const MarketplacePage: React.FC = () => {
               >
                 <div className="aspect-square bg-gray-100">
                   <img 
-                    src={categoryImages[category.id] || "/placeholder.svg"} 
+                    src="/images/just-placeholder.svg"
                     alt={category.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center transition-opacity group-hover:bg-opacity-50">
