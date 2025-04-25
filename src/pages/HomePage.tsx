@@ -64,7 +64,7 @@ const HomePage: React.FC = () => {
       
       <main className="pt-8 pb-16">
         {/* Hero Section - Full Screen */}
-        <section className="min-h-[80vh] flex items-center justify-center px-4">
+        <section className="min-h-[100vh] flex items-center justify-center px-4 pt-16 md:pt-24">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-7xl md:text-8xl font-bold mb-16">
               <span className="text-black">Know What</span>{" "}
