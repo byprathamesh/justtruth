@@ -43,42 +43,49 @@ const HomePage: React.FC = () => {
       
       <main className="pt-32 pb-16">
         {/* Hero Section */}
-        <section className="container mx-auto px-4 text-center mb-20">
-          <h1 className="text-5xl md:text-6xl font-bold mb-12">
-            <span className="text-black">Know What</span>{" "}
-            <span className="text-orange-500">You Eat</span>
-          </h1>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Link to="/scan" className="group">
-              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 h-full transform hover:-translate-y-2">
-                <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center mx-auto mb-6 group-hover:bg-orange-500 transition-colors">
-                  <Camera size={28} className="text-white" />
-                </div>
-                <h3 className="text-2xl font-medium mb-4">Scan Product</h3>
-                <p className="text-gray-600">Scan any product to get detailed nutrition information</p>
-              </div>
-            </Link>
+        <section className="container mx-auto px-4 text-center mb-40">
+          <div className="flex flex-col items-center justify-center">
+            <img 
+              src="/logo.svg" 
+              alt="JustTrue Logo" 
+              className="w-32 h-32 mb-8"
+            />
+            <h1 className="text-6xl md:text-7xl font-bold mb-12">
+              <span className="text-black">Know What</span>{" "}
+              <span className="text-orange-500">You Eat</span>
+            </h1>
             
-            <Link to="/marketplace" className="group">
-              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 h-full transform hover:-translate-y-2">
-                <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center mx-auto mb-6 group-hover:bg-orange-500 transition-colors">
-                  <ShoppingCart size={28} className="text-white" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <Link to="/scan" className="group">
+                <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 h-full transform hover:-translate-y-2">
+                  <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center mx-auto mb-6 group-hover:bg-orange-500 transition-colors">
+                    <Camera size={28} className="text-white" />
+                  </div>
+                  <h3 className="text-2xl font-medium mb-4">Scan Product</h3>
+                  <p className="text-gray-600">Scan any product to get detailed nutrition information</p>
                 </div>
-                <h3 className="text-2xl font-medium mb-4">JustTrue Products</h3>
-                <p className="text-gray-600">Explore our range of preservative-free products</p>
-              </div>
-            </Link>
-            
-            <Link to="/compare" className="group">
-              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 h-full transform hover:-translate-y-2">
-                <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center mx-auto mb-6 group-hover:bg-orange-500 transition-colors">
-                  <Search size={28} className="text-white" />
+              </Link>
+              
+              <Link to="/marketplace" className="group">
+                <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 h-full transform hover:-translate-y-2">
+                  <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center mx-auto mb-6 group-hover:bg-orange-500 transition-colors">
+                    <ShoppingCart size={28} className="text-white" />
+                  </div>
+                  <h3 className="text-2xl font-medium mb-4">JustTrue Products</h3>
+                  <p className="text-gray-600">Explore our range of preservative-free products</p>
                 </div>
-                <h3 className="text-2xl font-medium mb-4">Compare Products</h3>
-                <p className="text-gray-600">Compare different products side by side</p>
-              </div>
-            </Link>
+              </Link>
+              
+              <Link to="/compare" className="group">
+                <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 h-full transform hover:-translate-y-2">
+                  <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center mx-auto mb-6 group-hover:bg-orange-500 transition-colors">
+                    <Search size={28} className="text-white" />
+                  </div>
+                  <h3 className="text-2xl font-medium mb-4">Compare Products</h3>
+                  <p className="text-gray-600">Compare different products side by side</p>
+                </div>
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -88,9 +95,9 @@ const HomePage: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="md:w-1/2">
                 <img 
-                  src="/vision-image.svg" 
+                  src="/images/vision.jpg" 
                   alt="Our Vision" 
-                  className="rounded-lg shadow-lg w-full"
+                  className="rounded-lg shadow-lg w-full h-[400px] object-cover"
                 />
               </div>
               <div className="md:w-1/2">
