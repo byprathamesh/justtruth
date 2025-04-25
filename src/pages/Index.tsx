@@ -152,81 +152,140 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Testimonials Section */}
       <section className="py-20 bg-gray-50">
+        <div className="container mx-auto max-w-6xl px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">What Our Users Say</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+                <div>
+                  <h3 className="font-semibold">Sarah Johnson</h3>
+                  <p className="text-sm text-gray-500">Health Enthusiast</p>
+                </div>
+              </div>
+              <p className="text-gray-600">
+                "This app has completely changed how I shop for groceries. I can finally understand what's in my food!"
+              </p>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+                <div>
+                  <h3 className="font-semibold">Michael Chen</h3>
+                  <p className="text-sm text-gray-500">Nutritionist</p>
+                </div>
+              </div>
+              <p className="text-gray-600">
+                "As a nutritionist, I recommend this app to all my clients. It's an essential tool for making informed choices."
+              </p>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+                <div>
+                  <h3 className="font-semibold">Emma Rodriguez</h3>
+                  <p className="text-sm text-gray-500">Busy Mom</p>
+                </div>
+              </div>
+              <p className="text-gray-600">
+                "Finally, a simple way to make healthier choices for my family. The scanning feature is a game-changer!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20">
+        <div className="container mx-auto max-w-6xl px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center mb-4">
+                <CheckCircle2 className="text-green-500 mr-3" />
+                <h3 className="font-semibold">Transparent Information</h3>
+              </div>
+              <p className="text-gray-600">
+                We provide clear, honest information about food products, helping you make informed decisions about what you eat.
+              </p>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center mb-4">
+                <Shield className="text-green-500 mr-3" />
+                <h3 className="font-semibold">Trusted Source</h3>
+              </div>
+              <p className="text-gray-600">
+                Our data is verified by nutrition experts and updated regularly to ensure accuracy and reliability.
+              </p>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center mb-4">
+                <Users className="text-green-500 mr-3" />
+                <h3 className="font-semibold">Community Driven</h3>
+              </div>
+              <p className="text-gray-600">
+                Join a community of health-conscious individuals sharing knowledge and experiences about food choices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Other Brands Fool You Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto max-w-6xl px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">How Other Brands Fool You</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold mb-4">Misleading Labels</h3>
+              <p className="text-gray-600 mb-4">
+                Many brands use terms like "natural," "healthy," or "organic" in ways that can be misleading. We help you understand what these terms really mean.
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li>• "Natural" doesn't always mean healthy</li>
+                <li>• "Low-fat" often means high in sugar</li>
+                <li>• "Made with real fruit" can contain minimal actual fruit</li>
+              </ul>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-semibold mb-4">Hidden Ingredients</h3>
+              <p className="text-gray-600 mb-4">
+                Food manufacturers often hide unhealthy ingredients under different names or in small quantities to avoid detection.
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li>• Multiple names for sugar</li>
+                <li>• Artificial preservatives</li>
+                <li>• Unnecessary additives</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Story Section */}
+      <section className="py-20">
         <div className="container mx-auto max-w-6xl px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-6">Why Choose Us</h2>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <CheckCircle2 className="text-green-500 mr-4 mt-1" />
-                  <div>
-                    <h3 className="font-semibold mb-2">Natural Ingredients</h3>
-                    <p className="text-gray-600">
-                      We use only natural, recognizable ingredients in our products.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle2 className="text-green-500 mr-4 mt-1" />
-                  <div>
-                    <h3 className="font-semibold mb-2">Complete Transparency</h3>
-                    <p className="text-gray-600">
-                      Every ingredient is clearly listed with its purpose.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle2 className="text-green-500 mr-4 mt-1" />
-                  <div>
-                    <h3 className="font-semibold mb-2">Health-First Approach</h3>
-                    <p className="text-gray-600">
-                      Your health and well-being are our top priorities.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Founded by a team of nutritionists, food scientists, and tech enthusiasts, our journey began with a simple question: Why is it so hard to know what's in our food?
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                We realized that food transparency shouldn't be a luxury. Everyone deserves to know exactly what they're putting into their bodies.
+              </p>
+              <p className="text-lg text-gray-600">
+                Today, we're on a mission to make food transparency accessible to everyone, one scan at a time.
+              </p>
             </div>
             <div className="md:w-1/2">
-              <div className="grid grid-cols-1 gap-6">
-                <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <Shield className="text-black mr-3" />
-                    <h3 className="font-semibold">Quality Assurance</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    Rigorous testing and quality control ensure the highest standards.
-                  </p>
-                  <Link to="/quality" className="text-black hover:underline">
-                    Learn more →
-                  </Link>
-                </div>
-                <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <Leaf className="text-black mr-3" />
-                    <h3 className="font-semibold">Sustainability</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    Environmentally responsible practices throughout our supply chain.
-                  </p>
-                  <Link to="/sustainability" className="text-black hover:underline">
-                    Learn more →
-                  </Link>
-                </div>
-                <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <Users className="text-black mr-3" />
-                    <h3 className="font-semibold">Community Impact</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    Supporting local communities and promoting food education.
-                  </p>
-                  <Link to="/community" className="text-black hover:underline">
-                    Learn more →
-                  </Link>
-                </div>
-              </div>
+              <img 
+                src="/our-story.svg" 
+                alt="Our Story" 
+                className="rounded-lg shadow-lg w-full"
+              />
             </div>
           </div>
         </div>
