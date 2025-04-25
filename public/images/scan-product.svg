@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="white"/>
+  <rect x="40" y="40" width="120" height="120" rx="10" stroke="#FFA500" stroke-width="4" fill="white"/>
+  <path d="M60 60h30v30H60V60z" stroke="#FFA500" stroke-width="4"/>
+  <path d="M110 60h30v30h-30V60z" stroke="#FFA500" stroke-width="4"/>
+  <path d="M60 110h30v30H60v-30z" stroke="#FFA500" stroke-width="4"/>
+  <line x1="100" y1="75" x2="100" y2="125" stroke="#FFA500" stroke-width="4"/>
+  <line x1="75" y1="100" x2="125" y2="100" stroke="#FFA500" stroke-width="4"/>
+</svg> 

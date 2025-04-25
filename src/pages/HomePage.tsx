@@ -59,12 +59,14 @@ const trendingComparisons = [
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50/30 to-white">
-      <Header />
+      <div className="max-w-6xl mx-auto">
+        <Header />
+      </div>
       <ChatBot />
       
-      <main className="pt-32 pb-16">
+      <main className="pt-20 pb-16">
         {/* Hero Section - Full Screen */}
-        <section className="min-h-screen flex items-center justify-center px-4">
+        <section className="min-h-[80vh] flex items-center justify-center px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-7xl md:text-8xl font-bold mb-16">
               <span className="text-black">Know What</span>{" "}
@@ -79,6 +81,11 @@ const HomePage: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-medium mb-4">Scan Product</h3>
                   <p className="text-gray-600">Scan any product to get detailed nutrition information</p>
+                  <img 
+                    src="/images/scan-product.svg" 
+                    alt="Scan Product" 
+                    className="w-32 h-32 mx-auto mt-4"
+                  />
                 </div>
               </Link>
               
@@ -89,6 +96,23 @@ const HomePage: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-medium mb-4">JustTrue Products</h3>
                   <p className="text-gray-600">Explore our range of preservative-free products</p>
+                  <div className="flex justify-center gap-2 mt-4">
+                    <img 
+                      src="/images/product-milk.svg" 
+                      alt="Milk" 
+                      className="w-16 h-16"
+                    />
+                    <img 
+                      src="/images/product-bread.svg" 
+                      alt="Bread" 
+                      className="w-16 h-16"
+                    />
+                    <img 
+                      src="/images/product-yogurt.svg" 
+                      alt="Yogurt" 
+                      className="w-16 h-16"
+                    />
+                  </div>
                 </div>
               </Link>
               
@@ -99,6 +123,11 @@ const HomePage: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-medium mb-4">Compare Products</h3>
                   <p className="text-gray-600">Compare different products side by side</p>
+                  <img 
+                    src="/images/compare-products.svg" 
+                    alt="Compare Products" 
+                    className="w-32 h-32 mx-auto mt-4"
+                  />
                 </div>
               </Link>
             </div>
