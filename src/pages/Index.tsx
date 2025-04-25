@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Camera, Upload, Search, Quote, Star, Calendar, User } from "lucide-react";
+import { Camera, Upload, Search, Quote, Star, Calendar, User, AlertTriangle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
@@ -288,7 +288,7 @@ const Index = () => {
       </section>
       
       {/* Educational Content */}
-      <section className="py-16 px-4 bg-gray-50 mt-48" id="education">
+      <section className="py-16 px-4 bg-gray-50 mt-64" id="education">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">Educate Yourself</h2>
           <p className="text-gray-600 mb-8">Learn about ingredients, additives, and make informed choices</p>
@@ -326,7 +326,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
               <img 
-                src="/placeholder.svg" 
+                src="/logo.svg" 
                 alt="Pure Ingredients" 
                 className="w-full h-64 object-cover rounded-lg shadow-md"
               />
