@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Camera, ShoppingCart, Search, Quote, Star } from "lucide-react";
+import { Camera, ShoppingCart, Search, Quote, Star, AlertTriangle, CheckCircle2, Leaf, Heart, Shield, Users } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatBot from "@/components/ChatBot";
@@ -81,44 +81,202 @@ const HomePage: React.FC = () => {
             </Link>
           </div>
         </section>
-        
-        {/* Educate Yourself - Videos */}
-        <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl font-bold mb-2 text-center">Educate Yourself</h2>
-            <p className="text-gray-600 mb-12 text-center">Watch these videos to learn more about nutrition and healthy choices</p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <VideoCard 
-                title="The Truth About Preservatives"
-                thumbnail="/placeholder.svg"
-                videoUrl={videoPlaceholders["preservatives-decoded"]}
-                description="Learn about different types of preservatives and their effects on health."
-                className="animate-slide-in opacity-0"
-                style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}
-              />
-              
-              <VideoCard 
-                title="JustTrue vs Competitors"
-                thumbnail="/placeholder.svg"
-                videoUrl={videoPlaceholders["hidden-sugar"]}
-                description="See how JustTrue products compare to leading brands."
-                className="animate-slide-in opacity-0"
-                style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}
-              />
-              
-              <VideoCard 
-                title="Healthy Recipes with JustTrue"
-                thumbnail="/placeholder.svg"
-                videoUrl={videoPlaceholders["maltodextrin-explained"]}
-                description="Quick and easy recipes using JustTrue products."
-                className="animate-slide-in opacity-0"
-                style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}
-              />
+
+        {/* Our Vision Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto max-w-6xl px-4">
+            <div className="flex flex-col md:flex-row items-center gap-12">
+              <div className="md:w-1/2">
+                <img 
+                  src="/vision-image.svg" 
+                  alt="Our Vision" 
+                  className="rounded-lg shadow-lg w-full"
+                />
+              </div>
+              <div className="md:w-1/2">
+                <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
+                <p className="text-lg text-gray-600 mb-8">
+                  We believe in a world where food transparency is the norm, not the exception.
+                  Our mission is to empower consumers with the knowledge they need to make
+                  informed decisions about their food choices.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="p-6 bg-orange-50/30 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 className="font-semibold mb-2">Transparency</h3>
+                    <p className="text-gray-600">Clear, honest information about what's in your food</p>
+                  </div>
+                  <div className="p-6 bg-orange-50/30 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 className="font-semibold mb-2">Education</h3>
+                    <p className="text-gray-600">Empowering consumers with knowledge</p>
+                  </div>
+                  <div className="p-6 bg-orange-50/30 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <h3 className="font-semibold mb-2">Innovation</h3>
+                    <p className="text-gray-600">Using technology to drive positive change</p>
+                  </div>
+                </div>
+                <div className="mt-8">
+                  <Link to="/about">
+                    <Button className="bg-black hover:bg-gray-800">
+                      Learn More About Us
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-        
+
+        {/* Industry Truth Section */}
+        <section className="py-20 bg-orange-50/30">
+          <div className="container mx-auto max-w-6xl px-4">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center text-orange-500 mb-4">
+                <AlertTriangle className="mr-2" />
+                <h2 className="text-3xl font-bold">Industry Truths</h2>
+              </div>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Discover the hidden truths about common food industry practices
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border-l-4 border-orange-500">
+                <h3 className="font-semibold mb-2">Hidden Sugars</h3>
+                <p className="text-gray-600 mb-4">
+                  Many products contain more sugar than you might think, often under different names.
+                </p>
+                <ul className="text-sm text-gray-500">
+                  <li>• High fructose corn syrup</li>
+                  <li>• Dextrose</li>
+                  <li>• Maltose</li>
+                </ul>
+              </div>
+              <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border-l-4 border-orange-500">
+                <h3 className="font-semibold mb-2">Artificial Colors</h3>
+                <p className="text-gray-600 mb-4">
+                  Synthetic dyes are commonly used to make food more appealing.
+                </p>
+                <ul className="text-sm text-gray-500">
+                  <li>• Red 40</li>
+                  <li>• Yellow 5</li>
+                  <li>• Blue 1</li>
+                </ul>
+              </div>
+              <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border-l-4 border-orange-500">
+                <h3 className="font-semibold mb-2">Preservatives</h3>
+                <p className="text-gray-600 mb-4">
+                  Chemical preservatives extend shelf life but may have health implications.
+                </p>
+                <ul className="text-sm text-gray-500">
+                  <li>• BHA/BHT</li>
+                  <li>• Sodium benzoate</li>
+                  <li>• Potassium sorbate</li>
+                </ul>
+              </div>
+            </div>
+            <div className="text-center mt-12">
+              <Link to="/industry-practices">
+                <Button variant="outline" className="border-black text-black hover:bg-gray-100">
+                  Learn More About Industry Practices
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto max-w-6xl px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="p-6 bg-orange-50/30 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <CheckCircle2 className="text-orange-500 mr-3" />
+                  <h3 className="font-semibold">Transparent Information</h3>
+                </div>
+                <p className="text-gray-600">
+                  We provide clear, honest information about food products, helping you make informed decisions about what you eat.
+                </p>
+              </div>
+              <div className="p-6 bg-orange-50/30 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <Shield className="text-orange-500 mr-3" />
+                  <h3 className="font-semibold">Trusted Source</h3>
+                </div>
+                <p className="text-gray-600">
+                  Our data is verified by nutrition experts and updated regularly to ensure accuracy and reliability.
+                </p>
+              </div>
+              <div className="p-6 bg-orange-50/30 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <Users className="text-orange-500 mr-3" />
+                  <h3 className="font-semibold">Community Driven</h3>
+                </div>
+                <p className="text-gray-600">
+                  Join a community of health-conscious individuals sharing knowledge and experiences about food choices.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How Other Brands Fool You Section */}
+        <section className="py-20 bg-orange-50/30">
+          <div className="container mx-auto max-w-6xl px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">How Other Brands Fool You</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="font-semibold mb-4">Misleading Labels</h3>
+                <p className="text-gray-600 mb-4">
+                  Many brands use terms like "natural," "healthy," or "organic" in ways that can be misleading. We help you understand what these terms really mean.
+                </p>
+                <ul className="text-sm text-gray-500 space-y-2">
+                  <li>• "Natural" doesn't always mean healthy</li>
+                  <li>• "Low-fat" often means high in sugar</li>
+                  <li>• "Made with real fruit" can contain minimal actual fruit</li>
+                </ul>
+              </div>
+              <div className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="font-semibold mb-4">Hidden Ingredients</h3>
+                <p className="text-gray-600 mb-4">
+                  Food manufacturers often hide unhealthy ingredients under different names or in small quantities to avoid detection.
+                </p>
+                <ul className="text-sm text-gray-500 space-y-2">
+                  <li>• Multiple names for sugar</li>
+                  <li>• Artificial preservatives</li>
+                  <li>• Unnecessary additives</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Story Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto max-w-6xl px-4">
+            <div className="flex flex-col md:flex-row items-center gap-12">
+              <div className="md:w-1/2">
+                <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+                <p className="text-lg text-gray-600 mb-6">
+                  Founded by a team of nutritionists, food scientists, and tech enthusiasts, our journey began with a simple question: Why is it so hard to know what's in our food?
+                </p>
+                <p className="text-lg text-gray-600 mb-6">
+                  We realized that food transparency shouldn't be a luxury. Everyone deserves to know exactly what they're putting into their bodies.
+                </p>
+                <p className="text-lg text-gray-600">
+                  Today, we're on a mission to make food transparency accessible to everyone, one scan at a time.
+                </p>
+              </div>
+              <div className="md:w-1/2">
+                <img 
+                  src="/our-story.svg" 
+                  alt="Our Story" 
+                  className="rounded-lg shadow-lg w-full"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Customer Testimonials */}
         <section className="py-16 px-4 bg-orange-50/30">
           <div className="container mx-auto max-w-6xl">
