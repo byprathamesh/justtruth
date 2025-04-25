@@ -356,13 +356,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Customer Testimonials and Related Sections */}
       <section className="py-16 px-4 bg-white" id="testimonials">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">Customer Testimonials</h2>
           <p className="text-gray-600 mb-8">Hear from our customers who have made the switch to preservative-free living</p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="bg-gray-50 p-6 rounded-lg shadow-md animate-slide-in opacity-0 hover:shadow-xl transition-all duration-300">
                 <div className="mb-4 relative">
@@ -390,6 +390,65 @@ const Index = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Related Sections Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            {/* Our Mission Preview */}
+            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+              <p className="text-gray-600 mb-6">
+                Discover our commitment to transparency and quality in food products.
+                Learn about our journey and values that drive us to create better food choices.
+              </p>
+              <Link to="/mission">
+                <Button className="w-full bg-black hover:bg-gray-800">
+                  Learn More About Our Mission
+                </Button>
+              </Link>
+            </div>
+
+            {/* Industry Truth Preview */}
+            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold mb-4">Industry Truth</h3>
+              <p className="text-gray-600 mb-6">
+                Uncover the hidden facts about food industry practices and learn how to make
+                informed decisions about your food choices.
+              </p>
+              <Link to="/industry-truth">
+                <Button className="w-full bg-black hover:bg-gray-800">
+                  Explore Industry Insights
+                </Button>
+              </Link>
+            </div>
+
+            {/* Blog Preview */}
+            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold mb-4">Latest from Our Blog</h3>
+              <p className="text-gray-600 mb-6">
+                Read our latest articles on nutrition, healthy living, and food transparency.
+                Stay informed with expert insights and tips.
+              </p>
+              <Link to="/blog">
+                <Button className="w-full bg-black hover:bg-gray-800">
+                  Visit Our Blog
+                </Button>
+              </Link>
+            </div>
+
+            {/* More Testimonials Preview */}
+            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold mb-4">More Success Stories</h3>
+              <p className="text-gray-600 mb-6">
+                Read more inspiring stories from our customers who have embraced
+                healthier food choices with JustTrue.
+              </p>
+              <Link to="/testimonials">
+                <Button className="w-full bg-black hover:bg-gray-800">
+                  Read More Testimonials
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

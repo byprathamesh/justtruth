@@ -50,10 +50,8 @@ const Header: React.FC = () => {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#mission" className="text-gray-800 hover:text-orange-500 transition-colors">Our Mission</a>
-            <a href="#testimonials" className="text-gray-800 hover:text-orange-500 transition-colors">Testimonials</a>
-            <a href="#industry-truth" className="text-gray-800 hover:text-orange-500 transition-colors">Industry Truth</a>
-            <a href="#blog" className="text-gray-800 hover:text-orange-500 transition-colors">Blog</a>
+            <Link to="/about" className="text-gray-800 hover:text-orange-500 transition-colors">About Us</Link>
+            <Link to="/products" className="text-gray-800 hover:text-orange-500 transition-colors">Products</Link>
           </div>
 
           <div className="flex items-center">
@@ -63,10 +61,8 @@ const Header: React.FC = () => {
               </SheetTrigger>
               <SheetContent side="right">
                 <div className="flex flex-col space-y-4 mt-8">
-                  <a href="#mission" className="text-gray-800 hover:text-orange-500 transition-colors">Our Mission</a>
-                  <a href="#testimonials" className="text-gray-800 hover:text-orange-500 transition-colors">Testimonials</a>
-                  <a href="#industry-truth" className="text-gray-800 hover:text-orange-500 transition-colors">Industry Truth</a>
-                  <a href="#blog" className="text-gray-800 hover:text-orange-500 transition-colors">Blog</a>
+                  <Link to="/about" className="text-gray-800 hover:text-orange-500 transition-colors">About Us</Link>
+                  <Link to="/products" className="text-gray-800 hover:text-orange-500 transition-colors">Products</Link>
                 </div>
               </SheetContent>
             </Sheet>
