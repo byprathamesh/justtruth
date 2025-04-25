@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { useAuth } from '@/lib/auth';
+import { useAuth } from '@/lib/useAuth';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/components/ui/use-toast';
 
@@ -101,4 +101,4 @@ const LoginPage: React.FC = () => {
   );
 };
 
-export default LoginPage; 
+export default LoginPage;
