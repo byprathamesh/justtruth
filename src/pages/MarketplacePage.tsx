@@ -1,7 +1,6 @@
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Camera, Search, ShoppingCart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -13,7 +12,6 @@ import ProductCard from "@/components/ProductCard";
 const MarketplacePage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   
-  // Get all JustBrand products
   const justBrandProducts = getJustBrandProducts();
   
   const getFreshProducts = () => {
@@ -35,21 +33,36 @@ const MarketplacePage: React.FC = () => {
   const householdProducts = getHouseholdProducts();
   
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-orange-50/30 to-white">
       <Header />
       
       <div className="container mx-auto max-w-6xl px-4 pt-24 pb-16">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">JustTrue Marketplace</h1>
-          <p className="text-gray-600 mb-6">
-            Discover our range of preservative-free, additive-free products
+        <div className="mb-8 animate-fade-in">
+          <h1 className="text-4xl font-bold mb-3 text-center">JustTrue Marketplace</h1>
+          <p className="text-gray-600 mb-8 text-center text-lg max-w-2xl mx-auto">
+            Discover our range of preservative-free, additive-free products crafted with care and transparency
           </p>
           
           <Tabs defaultValue="all" className="w-full" onValueChange={setActiveCategory}>
-            <TabsList className="grid grid-cols-3 max-w-md mx-auto mb-8">
-              <TabsTrigger value="all">All Products</TabsTrigger>
-              <TabsTrigger value="fresh">Fresh Items</TabsTrigger>
-              <TabsTrigger value="household">Household</TabsTrigger>
+            <TabsList className="grid grid-cols-3 max-w-md mx-auto mb-12 bg-white/50 backdrop-blur-sm">
+              <TabsTrigger 
+                value="all"
+                className="data-[state=active]:bg-black data-[state=active]:text-white"
+              >
+                All Products
+              </TabsTrigger>
+              <TabsTrigger 
+                value="fresh"
+                className="data-[state=active]:bg-black data-[state=active]:text-white"
+              >
+                Fresh Items
+              </TabsTrigger>
+              <TabsTrigger 
+                value="household"
+                className="data-[state=active]:bg-black data-[state=active]:text-white"
+              >
+                Household
+              </TabsTrigger>
             </TabsList>
             
             <TabsContent value="all" className="animate-fade-in">
@@ -58,7 +71,7 @@ const MarketplacePage: React.FC = () => {
                   <ProductCard 
                     key={product.id} 
                     product={product}
-                    className="animate-slide-in opacity-0"
+                    className="animate-slide-in opacity-0 bg-white hover:shadow-xl transition-all duration-300"
                     style={{ animationDelay: `${idx * 0.05}s`, animationFillMode: 'forwards' }}
                   />
                 ))}
@@ -71,7 +84,7 @@ const MarketplacePage: React.FC = () => {
                   <ProductCard 
                     key={product.id} 
                     product={product}
-                    className="animate-slide-in opacity-0"
+                    className="animate-slide-in opacity-0 bg-white hover:shadow-xl transition-all duration-300"
                     style={{ animationDelay: `${idx * 0.05}s`, animationFillMode: 'forwards' }}
                   />
                 ))}
@@ -84,7 +97,7 @@ const MarketplacePage: React.FC = () => {
                   <ProductCard 
                     key={product.id} 
                     product={product}
-                    className="animate-slide-in opacity-0"
+                    className="animate-slide-in opacity-0 bg-white hover:shadow-xl transition-all duration-300"
                     style={{ animationDelay: `${idx * 0.05}s`, animationFillMode: 'forwards' }}
                   />
                 ))}
@@ -93,14 +106,14 @@ const MarketplacePage: React.FC = () => {
           </Tabs>
         </div>
         
-        <section className="bg-gray-50 p-8 rounded-lg my-12">
+        <section className="bg-white p-8 rounded-lg my-12 shadow-lg animate-fade-in">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-6 md:mb-0 md:pr-8">
               <h2 className="text-2xl font-bold mb-3">Why Choose JustTrue Products?</h2>
               <p className="text-gray-600 mb-4">
                 At JustTrue, we believe in transparency and quality. Our products are:
               </p>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-orange-500 mr-2">✓</span>
                   <span>Free from harmful preservatives</span>
@@ -124,23 +137,28 @@ const MarketplacePage: React.FC = () => {
               </ul>
             </div>
             <div className="md:w-1/2">
-              <img 
-                src="/placeholder.svg" 
-                alt="JustTrue Products" 
-                className="rounded-lg w-full h-64 object-cover"
-              />
+              <div className="relative">
+                <img 
+                  src="/placeholder.svg" 
+                  alt="JustTrue Products" 
+                  className="rounded-lg w-full h-64 object-cover shadow-lg transition-transform duration-300 hover:scale-105"
+                />
+                <div className="absolute -bottom-4 -left-4 bg-black text-white px-4 py-2 rounded-lg">
+                  <span className="font-medium">Just ingredients you can trust</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
         
-        <section className="my-12">
+        <section className="my-12 animate-fade-in">
           <h2 className="text-2xl font-bold mb-6">Shop By Category</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {categories.map((category, idx) => (
               <Link 
                 key={category.id}
                 to={`/category/${category.id}`}
-                className="group relative overflow-hidden rounded-lg animate-slide-in opacity-0"
+                className="group relative overflow-hidden rounded-lg animate-slide-in opacity-0 shadow-lg bg-white"
                 style={{ animationDelay: `${idx * 0.1}s`, animationFillMode: 'forwards' }}
               >
                 <div className="aspect-square bg-gray-100">

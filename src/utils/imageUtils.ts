@@ -1,29 +1,28 @@
-
 export const placeholder = "/placeholder.svg";
 
 export const productImages: Record<string, string> = {
-  "just-milk": placeholder,
-  "amul-milk": placeholder,
-  "mother-dairy-milk": placeholder,
-  "just-cheese": placeholder,
-  "amul-cheese": placeholder,
-  "britannia-cheese": placeholder,
-  "just-butter": placeholder,
-  "amul-butter": placeholder,
-  "britannia-butter": placeholder,
-  "just-chips": placeholder,
-  "lays-chips": placeholder,
-  "bingo-chips": placeholder,
-  "just-vegetables": placeholder,
-  "regular-vegetables": placeholder,
-  "just-fruits": placeholder,
-  "regular-fruits": placeholder,
-  "just-soap": placeholder,
-  "regular-soap": placeholder,
-  "just-shampoo": placeholder,
-  "regular-shampoo": placeholder,
-  "just-detergent": placeholder,
-  "regular-detergent": placeholder,
+  "just-milk": "/placeholder.svg",
+  "amul-milk": "/placeholder.svg",
+  "mother-dairy-milk": "/placeholder.svg",
+  "just-cheese": "/placeholder.svg",
+  "amul-cheese": "/placeholder.svg",
+  "britannia-cheese": "/placeholder.svg",
+  "just-butter": "/placeholder.svg",
+  "amul-butter": "/placeholder.svg",
+  "britannia-butter": "/placeholder.svg",
+  "just-chips": "/placeholder.svg",
+  "lays-chips": "/placeholder.svg",
+  "bingo-chips": "/placeholder.svg",
+  "just-vegetables": "/placeholder.svg",
+  "regular-vegetables": "/placeholder.svg",
+  "just-fruits": "/placeholder.svg",
+  "regular-fruits": "/placeholder.svg",
+  "just-soap": "/placeholder.svg",
+  "regular-soap": "/placeholder.svg",
+  "just-shampoo": "/placeholder.svg",
+  "regular-shampoo": "/placeholder.svg",
+  "just-detergent": "/placeholder.svg",
+  "regular-detergent": "/placeholder.svg",
 };
 
 export const categoryImages: Record<string, string> = {
@@ -55,4 +54,15 @@ export const videoPlaceholders: Record<string, string> = {
   "organic-farming-benefits": placeholder,
   "fitness-with-justtrue": placeholder,
   "just-products-guide": placeholder,
+};
+
+// Add video thumbnails
+export const videoThumbnails: Record<string, string> = {
+  "maltodextrin-explained": "/placeholder.svg",
+  "hidden-sugar": "/placeholder.svg",
+  "preservatives-decoded": "/placeholder.svg",
+  "palm-oil-impact": "/placeholder.svg",
+  "organic-farming-benefits": "/placeholder.svg",
+  "fitness-with-justtrue": "/placeholder.svg",
+  "just-products-guide": "/placeholder.svg",
 };
