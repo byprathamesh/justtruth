@@ -11,8 +11,8 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center bg-white">
-        <div className="container mx-auto max-w-6xl px-4 pt-16">
+      <section className="min-h-[100vh] flex items-center bg-white">
+        <div className="container mx-auto max-w-6xl px-4 pt-24 md:pt-32">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0 pr-0 md:pr-8 animate-slide-in">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">Know What You Eat</h1>
