@@ -293,6 +293,53 @@ const Index = () => {
           <h2 className="text-2xl md:text-3xl font-bold mb-2">Educate Yourself</h2>
           <p className="text-gray-600 mb-8">Learn about ingredients, additives, and make informed choices</p>
           
+          {/* Our Mission */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+            <p className="text-gray-600 mb-8">Transparency Above All</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div>
+                <img 
+                  src="/placeholder.svg" 
+                  alt="Pure Ingredients" 
+                  className="w-full h-64 object-cover rounded-lg shadow-md"
+                />
+              </div>
+              <div>
+                <p className="text-gray-700 mb-4">
+                  At JustTrue, our mission is simple yet revolutionary: to bring complete transparency to food products. 
+                  We believe you deserve to know exactly what you're eating, without hidden ingredients or misleading labels.
+                </p>
+                <p className="text-gray-700">
+                  We're committed to providing you with food products that contain only the ingredients you can pronounce, 
+                  understand, and trust - nothing more, nothing less.
+                </p>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-orange-50 p-6 rounded-lg transform transition hover:scale-105">
+                <h3 className="font-bold text-lg mb-2">Honesty</h3>
+                <p className="text-gray-700">
+                  We are completely transparent about what's in our products, where they come from, and how they're made.
+                </p>
+              </div>
+              <div className="bg-orange-50 p-6 rounded-lg transform transition hover:scale-105">
+                <h3 className="font-bold text-lg mb-2">Purity</h3>
+                <p className="text-gray-700">
+                  We never use artificial preservatives, flavors, or colors in any of our products.
+                </p>
+              </div>
+              <div className="bg-orange-50 p-6 rounded-lg transform transition hover:scale-105">
+                <h3 className="font-bold text-lg mb-2">Sustainability</h3>
+                <p className="text-gray-700">
+                  We source locally whenever possible and ensure our packaging is environmentally friendly.
+                </p>
+              </div>
+            </div>
+          </div>
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {educationalContent.map((content, idx) => (
               <VideoCard 
@@ -305,55 +352,6 @@ const Index = () => {
                 style={{ animationDelay: `${idx * 0.1}s`, animationFillMode: 'forwards' }}
               />
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Mission */}
-      <section className="py-16 px-4 bg-gray-50" id="mission">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">Our Mission</h2>
-          <p className="text-gray-600 mb-8">Transparency Above All</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div>
-              <img 
-                src="/placeholder.svg" 
-                alt="Pure Ingredients" 
-                className="w-full h-64 object-cover rounded-lg shadow-md"
-              />
-            </div>
-            <div>
-              <p className="text-gray-700 mb-4">
-                At JustTrue, our mission is simple yet revolutionary: to bring complete transparency to food products. 
-                We believe you deserve to know exactly what you're eating, without hidden ingredients or misleading labels.
-              </p>
-              <p className="text-gray-700">
-                We're committed to providing you with food products that contain only the ingredients you can pronounce, 
-                understand, and trust - nothing more, nothing less.
-              </p>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-orange-50 p-6 rounded-lg transform transition hover:scale-105">
-              <h3 className="font-bold text-lg mb-2">Honesty</h3>
-              <p className="text-gray-700">
-                We are completely transparent about what's in our products, where they come from, and how they're made.
-              </p>
-            </div>
-            <div className="bg-orange-50 p-6 rounded-lg transform transition hover:scale-105">
-              <h3 className="font-bold text-lg mb-2">Purity</h3>
-              <p className="text-gray-700">
-                We never use artificial preservatives, flavors, or colors in any of our products.
-              </p>
-            </div>
-            <div className="bg-orange-50 p-6 rounded-lg transform transition hover:scale-105">
-              <h3 className="font-bold text-lg mb-2">Sustainability</h3>
-              <p className="text-gray-700">
-                We source locally whenever possible and ensure our packaging is environmentally friendly.
-              </p>
-            </div>
           </div>
         </div>
       </section>
