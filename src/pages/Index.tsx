@@ -75,7 +75,7 @@ const Index = () => {
             <div className="md:w-1/2 animate-fade-in">
               <div className="relative">
                 <img 
-                  src="/placeholder.svg" 
+                  src="/logo.svg" 
                   alt="Healthy food choices" 
                   className="rounded-lg shadow-lg w-full"
                 />
@@ -287,8 +287,8 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Educational Content */}
-      <section className="py-16 px-4 bg-gray-50 mt-64" id="education">
+      {/* Educate Yourself */}
+      <section className="py-16 px-4 bg-gray-50 mt-16" id="education">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">Educate Yourself</h2>
           <p className="text-gray-600 mb-8">Learn about ingredients, additives, and make informed choices</p>
@@ -298,7 +298,7 @@ const Index = () => {
               <VideoCard 
                 key={content.id}
                 title={content.title}
-                thumbnail={educationImages[content.id] || "/placeholder.svg"}
+                thumbnail="/logo.svg"
                 videoUrl={content.videoUrl}
                 description={content.description}
                 className="animate-slide-in opacity-0"
@@ -306,19 +306,11 @@ const Index = () => {
               />
             ))}
           </div>
-          
-          <div className="mt-10 text-center">
-            <Link to="/education">
-              <Button variant="outline" className="border-black text-black hover:bg-gray-100">
-                Explore All Content
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
 
       {/* Our Mission */}
-      <section className="py-16 px-4 bg-white" id="mission">
+      <section className="py-16 px-4 bg-gray-50" id="mission">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">Our Mission</h2>
           <p className="text-gray-600 mb-8">Transparency Above All</p>
@@ -367,14 +359,14 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 px-4 bg-gray-50" id="testimonials">
+      <section className="py-16 px-4 bg-white" id="testimonials">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">Customer Testimonials</h2>
           <p className="text-gray-600 mb-8">Hear from our customers who have made the switch to preservative-free living</p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="bg-white p-6 rounded-lg shadow-md animate-slide-in opacity-0 hover:shadow-xl transition-all duration-300">
+              <div key={testimonial.id} className="bg-gray-50 p-6 rounded-lg shadow-md animate-slide-in opacity-0 hover:shadow-xl transition-all duration-300">
                 <div className="mb-4 relative">
                   <Quote size={40} className="text-gray-200 absolute -left-2 -top-2" />
                   <p className="text-gray-700 italic relative z-10">{testimonial.text}</p>
@@ -383,7 +375,7 @@ const Index = () => {
                 <div className="flex items-center mt-6">
                   <div className="mr-4">
                     <img 
-                      src={testimonial.image} 
+                      src="/logo.svg" 
                       alt={testimonial.name} 
                       className="w-12 h-12 rounded-full object-cover border-2 border-orange-500"
                     />
@@ -405,7 +397,7 @@ const Index = () => {
       </section>
 
       {/* Industry Truth */}
-      <section className="py-16 px-4 bg-white" id="industry-truth">
+      <section className="py-16 px-4 bg-gray-50" id="industry-truth">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">Industry Truth</h2>
           <p className="text-gray-600 mb-8">The food industry often hides uncomfortable truths behind flashy packaging</p>
@@ -448,16 +440,16 @@ const Index = () => {
       </section>
 
       {/* Blog */}
-      <section className="py-16 px-4 bg-gray-50" id="blog">
+      <section className="py-16 px-4 bg-white" id="blog">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">JustTrue Blog</h2>
           <p className="text-gray-600 mb-8">Insights on nutrition, transparency, and healthy living</p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.slice(0, 3).map((post) => (
-              <div key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div key={post.id} className="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
                 <img 
-                  src={post.image} 
+                  src="/logo.svg" 
                   alt={post.title}
                   className="w-full h-48 object-cover"
                 />
@@ -478,14 +470,6 @@ const Index = () => {
                 </div>
               </div>
             ))}
-          </div>
-          
-          <div className="mt-10 text-center">
-            <Link to="/blog">
-              <Button variant="outline" className="border-black text-black hover:bg-gray-100">
-                Read More Articles
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
