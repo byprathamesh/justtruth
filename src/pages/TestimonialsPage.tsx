@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Star, Quote } from "lucide-react";
@@ -12,7 +11,7 @@ const testimonials = [
     id: 1,
     name: "Priya Sharma",
     location: "Mumbai",
-    image: "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png",
+    image: "/placeholder.svg",
     rating: 5,
     text: "I've been using JustTrue products for the past 6 months and the difference is noticeable. My family loves the natural taste and I love that I don't have to worry about harmful additives.",
     productUsed: "JustMilk, JustCheese"
@@ -21,7 +20,7 @@ const testimonials = [
     id: 2,
     name: "Rakesh Patel",
     location: "Ahmedabad",
-    image: "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png",
+    image: "/placeholder.svg",
     rating: 5,
     text: "As someone with food sensitivities, finding JustTrue has been life-changing. Their transparent ingredient lists give me confidence about what I'm eating.",
     productUsed: "JustButter, JustVegetables"
@@ -30,7 +29,7 @@ const testimonials = [
     id: 3,
     name: "Aisha Khan",
     location: "Delhi",
-    image: "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png",
+    image: "/placeholder.svg",
     rating: 4,
     text: "The scan feature is incredible! I was shocked to discover how many additives were in my regular grocery items. JustTrue products are now a staple in our household.",
     productUsed: "JustFruits"
@@ -39,7 +38,7 @@ const testimonials = [
     id: 4,
     name: "Vivek Reddy",
     location: "Bangalore",
-    image: "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png",
+    image: "/placeholder.svg",
     rating: 5,
     text: "As a fitness trainer, I always emphasize the importance of clean eating. JustTrue makes it easy for my clients to follow through with truly clean products.",
     productUsed: "JustChips, JustShampoo"
@@ -48,7 +47,7 @@ const testimonials = [
     id: 5,
     name: "Meena Iyer",
     location: "Chennai",
-    image: "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png",
+    image: "/placeholder.svg",
     rating: 5,
     text: "I was skeptical at first about how preservative-free products would taste or last, but JustTrue has proven that natural can be both delicious and practical!",
     productUsed: "JustSoap, JustDetergent"
@@ -57,7 +56,7 @@ const testimonials = [
     id: 6,
     name: "Rahul Verma",
     location: "Hyderabad",
-    image: "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png",
+    image: "/placeholder.svg",
     rating: 4,
     text: "The educational content JustTrue provides has made me much more aware of what I'm putting in and on my body. Their products back up their mission 100%.",
     productUsed: "JustMilk, JustVegetables"

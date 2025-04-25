@@ -44,7 +44,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-24">
           <Link to="/" className="flex items-center space-x-4">
             <img 
-              src="/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png" 
+              src="/placeholder.svg" 
               alt="JustTrue Logo" 
               className="h-20 w-auto transition-transform duration-300 hover:scale-105"
             />

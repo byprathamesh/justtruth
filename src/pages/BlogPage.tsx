@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User } from "lucide-react";
@@ -11,7 +10,7 @@ const blogPosts = [
     id: 1,
     title: "The Truth About Preservatives in Everyday Foods",
     excerpt: "Learn about the hidden preservatives in your daily meals and how they affect your health over time.",
-    image: "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png",
+    image: "/placeholder.svg",
     date: "April 22, 2025",
     author: "Dr. Anita Desai",
     category: "Nutrition",
@@ -21,7 +20,7 @@ const blogPosts = [
     id: 2,
     title: "How to Read Food Labels Like a Pro",
     excerpt: "Decode confusing food labels and discover what those ingredient lists really mean for your health.",
-    image: "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png",
+    image: "/placeholder.svg",
     date: "April 18, 2025",
     author: "Nikhil Mehta",
     category: "Food Literacy",
@@ -31,7 +30,7 @@ const blogPosts = [
     id: 3,
     title: "Breaking Down the Clean Label Movement",
     excerpt: "What does 'clean label' really mean, and is it always better for you? We investigate the trend.",
-    image: "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png",
+    image: "/placeholder.svg",
     date: "April 15, 2025",
     author: "Meera Chakraborty",
     category: "Industry Insights",
@@ -41,7 +40,7 @@ const blogPosts = [
     id: 4,
     title: "The Environmental Impact of Food Choices",
     excerpt: "How your grocery shopping habits affect the planet, and simple switches for a more sustainable pantry.",
-    image: "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png",
+    image: "/placeholder.svg",
     date: "April 10, 2025",
     author: "Arjun Sharma",
     category: "Sustainability",
@@ -51,7 +50,7 @@ const blogPosts = [
     id: 5,
     title: "Natural vs. Artificial: The Flavor Debate",
     excerpt: "Are natural flavors really any better than artificial ones? The answer might surprise you.",
-    image: "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png",
+    image: "/placeholder.svg",
     date: "April 5, 2025",
     author: "Dr. Priya Kapoor",
     category: "Food Science",
@@ -61,7 +60,7 @@ const blogPosts = [
     id: 6,
     title: "Farm to Table: The Journey of JustTrue Products",
     excerpt: "Follow our ingredients from local farms to your kitchen table, and meet the farmers behind your food.",
-    image: "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png",
+    image: "/placeholder.svg",
     date: "April 1, 2025",
     author: "Vikram Singh",
     category: "Behind the Scenes",

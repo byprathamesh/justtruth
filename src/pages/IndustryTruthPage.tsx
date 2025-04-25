@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, AlertTriangle, CheckCircle, AlertCircle } from "lucide-react";
@@ -79,7 +78,7 @@ const IndustryTruthPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <img 
-                      src="/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png" 
+                      src="/placeholder.svg" 
                       alt="Dairy Products" 
                       className="w-full h-64 object-cover rounded-lg shadow-sm mb-4"
                     />
@@ -110,7 +109,7 @@ const IndustryTruthPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <img 
-                      src="/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png" 
+                      src="/placeholder.svg" 
                       alt="Snack Products" 
                       className="w-full h-64 object-cover rounded-lg shadow-sm mb-4"
                     />
@@ -141,7 +140,7 @@ const IndustryTruthPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <img 
-                      src="/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png" 
+                      src="/placeholder.svg" 
                       alt="Personal Care Products" 
                       className="w-full h-64 object-cover rounded-lg shadow-sm mb-4"
                     />
@@ -172,7 +171,7 @@ const IndustryTruthPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <img 
-                      src="/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png" 
+                      src="/placeholder.svg" 
                       alt="Fresh Produce" 
                       className="w-full h-64 object-cover rounded-lg shadow-sm mb-4"
                     />

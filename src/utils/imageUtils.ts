@@ -1,8 +1,7 @@
-
 export const placeholder = "/placeholder.svg";
 
 // Use our standardized logo for product images where specific photos aren't yet available
-const defaultProductImage = "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png";
+const defaultProductImage = placeholder;
 
 export const productImages: Record<string, string> = {
   "just-milk": defaultProductImage,

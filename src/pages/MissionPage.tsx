@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
@@ -25,7 +24,7 @@ const MissionPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
               <img 
-                src="/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png" 
+                src="/placeholder.svg" 
                 alt="Pure Ingredients" 
                 className="w-full h-64 object-cover rounded-lg shadow-md"
               />

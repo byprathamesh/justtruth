@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -14,7 +13,7 @@ const testimonials = [
     id: 1,
     name: "Priya Sharma",
     location: "Mumbai",
-    image: "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png",
+    image: "/placeholder.svg",
     rating: 5,
     text: "Switching to JustTrue milk was the best decision. My kids love it and I can finally feel good about what they're drinking."
   },
@@ -22,7 +21,7 @@ const testimonials = [
     id: 2,
     name: "Rahul Verma",
     location: "Delhi",
-    image: "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png",
+    image: "/placeholder.svg",
     rating: 5,
     text: "The product scanner is incredible! I was shocked to discover how many additives were in my regular groceries."
   },
@@ -30,7 +29,7 @@ const testimonials = [
     id: 3,
     name: "Meena Patel",
     location: "Ahmedabad",
-    image: "/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png",
+    image: "/placeholder.svg",
     rating: 4,
     text: "My skin has improved dramatically since switching to JustTrue personal care products. No more irritation!"
   }
@@ -92,7 +91,7 @@ const HomePage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <VideoCard 
                 title="The Truth About Preservatives"
-                thumbnail="/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png"
+                thumbnail="/placeholder.svg"
                 videoUrl={videoPlaceholders["preservatives-decoded"]}
                 description="Learn about different types of preservatives and their effects on health."
                 className="animate-slide-in opacity-0"
@@ -101,7 +100,7 @@ const HomePage: React.FC = () => {
               
               <VideoCard 
                 title="JustTrue vs Competitors"
-                thumbnail="/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png"
+                thumbnail="/placeholder.svg"
                 videoUrl={videoPlaceholders["hidden-sugar"]}
                 description="See how JustTrue products compare to leading brands."
                 className="animate-slide-in opacity-0"
@@ -110,7 +109,7 @@ const HomePage: React.FC = () => {
               
               <VideoCard 
                 title="Healthy Recipes with JustTrue"
-                thumbnail="/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png"
+                thumbnail="/placeholder.svg"
                 videoUrl={videoPlaceholders["maltodextrin-explained"]}
                 description="Quick and easy recipes using JustTrue products."
                 className="animate-slide-in opacity-0"
