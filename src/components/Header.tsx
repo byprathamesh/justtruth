@@ -7,14 +7,14 @@ const Header: React.FC = () => {
   return (
     <header className="w-full bg-white/80 shadow-sm fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center space-x-3">
+        <div className="flex items-center justify-between h-24">
+          <Link to="/" className="flex items-center space-x-4">
             <img 
               src="/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png" 
               alt="JustTrue Logo" 
-              className="h-12 w-auto transition-transform duration-300 hover:scale-105"
+              className="h-16 w-auto transition-transform duration-300 hover:scale-105"
             />
-            <span className="text-2xl font-bold">
+            <span className="text-3xl font-bold">
               <span className="text-black">Just</span>
               <span className="text-orange-500">True</span>
             </span>
@@ -30,3 +30,4 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+
