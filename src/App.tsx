@@ -18,6 +18,7 @@ import TestimonialsPage from "./pages/TestimonialsPage";
 import IndustryTruthPage from "./pages/IndustryTruthPage";
 import BlogPage from "./pages/BlogPage";
 import SignUpPage from "./pages/SignUpPage";
+import LoginPage from "./pages/LoginPage";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/industry-truth" element={<IndustryTruthPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
