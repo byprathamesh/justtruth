@@ -606,52 +606,54 @@ const Index = () => {
       </section>
 
       {/* Our Vision Section */}
-      <section className="py-16 px-4 bg-white" id="vision">
+      <section className="py-24 px-4 bg-white" id="vision">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">Our Vision</h2>
-          <p className="text-gray-600 mb-8">Building a future where food transparency is the norm, not the exception</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Our Vision</h2>
+          <p className="text-gray-600 mb-12 text-center text-lg">Building a future where food transparency is the norm, not the exception</p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             <div>
               <img 
                 src="/placeholder.svg" 
                 alt="Our Vision" 
-                className="w-full h-64 object-cover rounded-lg shadow-md"
+                className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
             </div>
-            <div>
-              <p className="text-gray-700 mb-4">
+            <div className="flex flex-col justify-center">
+              <p className="text-gray-700 mb-6 text-lg">
                 At JustTrue, we envision a world where every consumer can make informed choices about their food. 
                 A world where ingredient lists are clear, honest, and free from hidden additives.
               </p>
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-700 mb-8 text-lg">
                 Our vision extends beyond just our products - we're working to transform the entire food industry 
                 through education, advocacy, and by setting new standards for transparency.
               </p>
-              <Link to="/vision">
-                <Button variant="outline" className="border-black text-black hover:bg-gray-100">
-                  Learn More About Our Vision
-                </Button>
-              </Link>
+              <div className="text-center md:text-left">
+                <Link to="/vision">
+                  <Button variant="outline" className="border-black text-black hover:bg-gray-100 px-8 py-4 text-lg">
+                    Learn More About Our Vision
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-orange-50 p-6 rounded-lg transform transition hover:scale-105">
-              <h3 className="font-bold text-lg mb-2">Transparency</h3>
-              <p className="text-gray-700">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-orange-50 p-8 rounded-lg transform transition hover:scale-105 shadow-md">
+              <h3 className="font-bold text-xl mb-4">Transparency</h3>
+              <p className="text-gray-700 text-lg">
                 Complete ingredient disclosure and honest labeling for all food products.
               </p>
             </div>
-            <div className="bg-orange-50 p-6 rounded-lg transform transition hover:scale-105">
-              <h3 className="font-bold text-lg mb-2">Education</h3>
-              <p className="text-gray-700">
+            <div className="bg-orange-50 p-8 rounded-lg transform transition hover:scale-105 shadow-md">
+              <h3 className="font-bold text-xl mb-4">Education</h3>
+              <p className="text-gray-700 text-lg">
                 Empowering consumers with knowledge about food ingredients and their impact.
               </p>
             </div>
-            <div className="bg-orange-50 p-6 rounded-lg transform transition hover:scale-105">
-              <h3 className="font-bold text-lg mb-2">Innovation</h3>
-              <p className="text-gray-700">
+            <div className="bg-orange-50 p-8 rounded-lg transform transition hover:scale-105 shadow-md">
+              <h3 className="font-bold text-xl mb-4">Innovation</h3>
+              <p className="text-gray-700 text-lg">
                 Developing new ways to make healthy, preservative-free food accessible to all.
               </p>
             </div>
@@ -660,49 +662,49 @@ const Index = () => {
       </section>
 
       {/* Industry Truth Section */}
-      <section className="py-16 px-4 bg-gray-50" id="industry-truth">
+      <section className="py-24 px-4 bg-gray-50" id="industry-truth">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">Industry Truth</h2>
-          <p className="text-gray-600 mb-8">The food industry often hides uncomfortable truths behind flashy packaging</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Industry Truth</h2>
+          <p className="text-gray-600 mb-12 text-center text-lg">The food industry often hides uncomfortable truths behind flashy packaging</p>
           
-          <div className="bg-white p-8 rounded-lg shadow-md mb-8">
-            <div className="flex items-center mb-6">
-              <AlertTriangle size={24} className="text-orange-500 mr-3" />
-              <h3 className="text-2xl font-bold">The Hidden Truth</h3>
+          <div className="bg-white p-12 rounded-lg shadow-lg mb-16">
+            <div className="flex items-center mb-8">
+              <AlertTriangle size={32} className="text-orange-500 mr-4" />
+              <h3 className="text-3xl font-bold">The Hidden Truth</h3>
             </div>
-            <p className="text-gray-700 mb-6">
+            <p className="text-gray-700 mb-8 text-lg">
               Many leading food brands use potentially harmful additives and preservatives that have been linked to various health issues. 
               These additives help extend shelf life, enhance flavor or appearance, but may come at the cost of your health.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="border border-gray-200 rounded-lg p-4">
-                <h3 className="font-bold text-lg mb-2">Hidden Sugars</h3>
-                <p className="text-gray-700 mb-2">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                <h3 className="font-bold text-xl mb-4">Hidden Sugars</h3>
+                <p className="text-gray-700 mb-4 text-lg">
                   Sugar can be listed under more than 60 different names on ingredient labels.
                 </p>
-                <p className="text-sm text-orange-600">Found in: Seemingly healthy cereals, yogurts, sauces</p>
+                <p className="text-lg text-orange-600 font-medium">Found in: Seemingly healthy cereals, yogurts, sauces</p>
               </div>
-              <div className="border border-gray-200 rounded-lg p-4">
-                <h3 className="font-bold text-lg mb-2">Artificial Colors</h3>
-                <p className="text-gray-700 mb-2">
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                <h3 className="font-bold text-xl mb-4">Artificial Colors</h3>
+                <p className="text-gray-700 mb-4 text-lg">
                   Synthetic food dyes have been linked to behavioral issues in children.
                 </p>
-                <p className="text-sm text-orange-600">Found in: Candies, snacks, beverages, even pickles</p>
+                <p className="text-lg text-orange-600 font-medium">Found in: Candies, snacks, beverages, even pickles</p>
               </div>
-              <div className="border border-gray-200 rounded-lg p-4">
-                <h3 className="font-bold text-lg mb-2">Preservatives</h3>
-                <p className="text-gray-700 mb-2">
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-all">
+                <h3 className="font-bold text-xl mb-4">Preservatives</h3>
+                <p className="text-gray-700 mb-4 text-lg">
                   Many preservatives are used to extend shelf life at the expense of your health.
                 </p>
-                <p className="text-sm text-orange-600">Found in: Most packaged and processed foods</p>
+                <p className="text-lg text-orange-600 font-medium">Found in: Most packaged and processed foods</p>
               </div>
             </div>
           </div>
           
           <div className="text-center">
             <Link to="/industry-truth">
-              <Button variant="outline" className="border-black text-black hover:bg-gray-100">
+              <Button variant="outline" className="border-black text-black hover:bg-gray-100 px-8 py-4 text-lg">
                 Learn More About Industry Practices
               </Button>
             </Link>
@@ -711,34 +713,34 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 px-4 bg-white" id="why-us">
+      <section className="py-24 px-4 bg-white" id="why-us">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">Why Choose JustTrue?</h2>
-          <p className="text-gray-600 mb-8">The difference is in our commitment to your health and transparency</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Why Choose JustTrue?</h2>
+          <p className="text-gray-600 mb-12 text-center text-lg">The difference is in our commitment to your health and transparency</p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             <div>
-              <h3 className="text-xl font-bold mb-4">Our Promise to You</h3>
-              <ul className="space-y-4">
+              <h3 className="text-2xl font-bold mb-8">Our Promise to You</h3>
+              <ul className="space-y-6">
                 <li className="flex items-start">
-                  <CheckCircle2 className="text-green-500 mr-3 mt-1" />
+                  <CheckCircle2 className="text-green-500 mr-4 mt-1" size={24} />
                   <div>
-                    <h4 className="font-semibold">100% Natural Ingredients</h4>
-                    <p className="text-gray-600">No artificial additives, colors, or preservatives</p>
+                    <h4 className="font-semibold text-xl mb-2">100% Natural Ingredients</h4>
+                    <p className="text-gray-600 text-lg">No artificial additives, colors, or preservatives</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle2 className="text-green-500 mr-3 mt-1" />
+                  <CheckCircle2 className="text-green-500 mr-4 mt-1" size={24} />
                   <div>
-                    <h4 className="font-semibold">Complete Transparency</h4>
-                    <p className="text-gray-600">Clear, honest labeling you can trust</p>
+                    <h4 className="font-semibold text-xl mb-2">Complete Transparency</h4>
+                    <p className="text-gray-600 text-lg">Clear, honest labeling you can trust</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle2 className="text-green-500 mr-3 mt-1" />
+                  <CheckCircle2 className="text-green-500 mr-4 mt-1" size={24} />
                   <div>
-                    <h4 className="font-semibold">Health-First Approach</h4>
-                    <p className="text-gray-600">Products designed with your well-being in mind</p>
+                    <h4 className="font-semibold text-xl mb-2">Health-First Approach</h4>
+                    <p className="text-gray-600 text-lg">Products designed with your well-being in mind</p>
                   </div>
                 </li>
               </ul>
@@ -747,41 +749,41 @@ const Index = () => {
               <img 
                 src="/placeholder.svg" 
                 alt="Why Choose Us" 
-                className="w-full h-64 object-cover rounded-lg shadow-md"
+                className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="font-bold text-lg mb-2">Quality Assurance</h3>
-              <p className="text-gray-700 mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="font-bold text-xl mb-4">Quality Assurance</h3>
+              <p className="text-gray-700 mb-6 text-lg">
                 Rigorous testing and quality control processes ensure the highest standards.
               </p>
               <Link to="/quality">
-                <Button variant="link" className="text-orange-500 p-0">
+                <Button variant="link" className="text-orange-500 p-0 text-lg">
                   Learn about our quality standards →
                 </Button>
               </Link>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="font-bold text-lg mb-2">Sustainability</h3>
-              <p className="text-gray-700 mb-4">
+            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="font-bold text-xl mb-4">Sustainability</h3>
+              <p className="text-gray-700 mb-6 text-lg">
                 Environmentally responsible sourcing and packaging practices.
               </p>
               <Link to="/sustainability">
-                <Button variant="link" className="text-orange-500 p-0">
+                <Button variant="link" className="text-orange-500 p-0 text-lg">
                   Our sustainability efforts →
                 </Button>
               </Link>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="font-bold text-lg mb-2">Community Impact</h3>
-              <p className="text-gray-700 mb-4">
+            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition-all">
+              <h3 className="font-bold text-xl mb-4">Community Impact</h3>
+              <p className="text-gray-700 mb-6 text-lg">
                 Supporting local farmers and promoting food education initiatives.
               </p>
               <Link to="/community">
-                <Button variant="link" className="text-orange-500 p-0">
+                <Button variant="link" className="text-orange-500 p-0 text-lg">
                   Our community work →
                 </Button>
               </Link>
