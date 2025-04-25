@@ -75,7 +75,7 @@ const Index = () => {
             <div className="md:w-1/2 animate-fade-in">
               <div className="relative">
                 <img 
-                  src="/logo.svg" 
+                  src="/placeholder.svg" 
                   alt="Healthy food choices" 
                   className="rounded-lg shadow-lg w-full"
                 />
@@ -298,7 +298,7 @@ const Index = () => {
               <VideoCard 
                 key={content.id}
                 title={content.title}
-                thumbnail="/logo.svg"
+                thumbnail="/placeholder.svg"
                 videoUrl={content.videoUrl}
                 description={content.description}
                 className="animate-slide-in opacity-0"
@@ -318,7 +318,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
               <img 
-                src="/logo.svg" 
+                src="/placeholder.svg" 
                 alt="Pure Ingredients" 
                 className="w-full h-64 object-cover rounded-lg shadow-md"
               />
@@ -375,7 +375,7 @@ const Index = () => {
                 <div className="flex items-center mt-6">
                   <div className="mr-4">
                     <img 
-                      src="/logo.svg" 
+                      src="/placeholder.svg" 
                       alt={testimonial.name} 
                       className="w-12 h-12 rounded-full object-cover border-2 border-orange-500"
                     />
@@ -449,7 +449,7 @@ const Index = () => {
             {blogPosts.slice(0, 3).map((post) => (
               <div key={post.id} className="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
                 <img 
-                  src="/logo.svg" 
+                  src="/placeholder.svg" 
                   alt={post.title}
                   className="w-full h-48 object-cover"
                 />
