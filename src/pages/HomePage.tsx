@@ -62,10 +62,10 @@ const HomePage: React.FC = () => {
       <Header />
       <ChatBot />
       
-      <main>
+      <main className="pt-0">
         {/* Hero Section - Full Screen */}
-        <section className="min-h-[100vh] flex items-center justify-center px-4 pt-24 md:pt-32">
-          <div className="text-center max-w-4xl mx-auto">
+        <section className="min-h-screen flex items-center justify-center px-4 pt-24 md:pt-32">
+          <div className="text-center max-w-4xl mx-auto mt-8">
             <h1 className="text-7xl md:text-8xl font-bold mb-16">
               <span className="text-black">Know What</span>{" "}
               <span className="text-orange-500">You Eat</span>
@@ -133,7 +133,7 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Trending Comparisons Section */}
-        <section className="py-20 bg-white mt-20">
+        <section className="py-20 bg-white">
           <div className="container mx-auto max-w-6xl px-4">
             <div className="text-center mb-12">
               <div className="inline-flex items-center text-orange-500 mb-4">
