@@ -10,7 +10,11 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold">Just<span className="text-black">Brand</span></span>
+            <img src="/lovable-uploads/6b0b7d75-b20e-4267-bff6-334e221b062f.png" alt="JustTrue Logo" className="h-8 w-auto" />
+            <span className="text-xl font-bold">
+              <span className="text-black">Just</span>
+              <span className="text-orange-500">True</span>
+            </span>
           </Link>
 
           <div className="flex items-center space-x-4">
@@ -21,7 +25,7 @@ const Header: React.FC = () => {
               <input 
                 type="text" 
                 placeholder="Search for products..." 
-                className="w-64 pl-10 pr-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:ring-1 focus:ring-black"
+                className="w-64 pl-10 pr-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:ring-1 focus:ring-orange-500"
               />
             </div>
             <Button variant="outline" className="border-black text-black hover:bg-gray-100">

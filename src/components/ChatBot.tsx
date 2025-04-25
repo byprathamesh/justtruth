@@ -1,147 +1,110 @@
 
-import React, { useState, useRef, useEffect } from "react";
-import { cn } from "@/lib/utils";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/button";
-import { MessageSquare, X, Send } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { ArrowRight } from "lucide-react";
 
-interface Message {
-  id: number;
-  isBot: boolean;
-  text: string;
-  timestamp: Date;
-}
-
-interface ChatBotProps {
-  className?: string;
-}
-
-const ChatBot: React.FC<ChatBotProps> = ({ className }) => {
+const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: 1,
-      isBot: true,
-      text: "Hello! I'm your nutrition assistant. How can I help you today? You can ask me about ingredients, nutrition facts, or healthier alternatives.",
-      timestamp: new Date()
-    }
+  const [messages, setMessages] = useState<{ text: string; isUser: boolean }[]>([
+    { text: "Hi there! I'm your nutrition assistant. Ask me anything about food ingredients or healthy choices!", isUser: false }
   ]);
-  const [input, setInput] = useState("");
-  const bottomRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    if (isOpen) {
-      bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [messages, isOpen]);
-  
-  const handleSend = () => {
-    if (!input.trim()) return;
-    
-    // Add user message
-    const userMessage = {
-      id: messages.length + 1,
-      isBot: false,
-      text: input,
-      timestamp: new Date()
-    };
-    
-    setMessages(prev => [...prev, userMessage]);
-    setInput("");
-    
-    // Simulate bot response
-    setTimeout(() => {
-      const botResponses = [
-        "I'd recommend checking products with fewer preservatives and artificial additives.",
-        "Most processed foods contain additives like maltodextrin, which can affect blood sugar levels.",
-        "JustBrand products are free from artificial preservatives and colors.",
-        "Comparing nutrition labels is a great way to make healthier choices.",
-        "Hidden sugars often appear under different names like dextrose or high-fructose corn syrup."
-      ];
-      
-      const randomResponse = botResponses[Math.floor(Math.random() * botResponses.length)];
-      
-      const botMessage = {
-        id: messages.length + 2,
-        isBot: true,
-        text: randomResponse,
-        timestamp: new Date()
-      };
-      
-      setMessages(prev => [...prev, botMessage]);
-    }, 800);
+  const [userInput, setUserInput] = useState("");
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const toggleChat = () => {
+    setIsOpen(!isOpen);
   };
-  
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter") {
-      handleSend();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (userInput.trim()) {
+      // Add user message
+      setMessages([...messages, { text: userInput, isUser: true }]);
+      
+      // Simulate AI response
+      setTimeout(() => {
+        setMessages(prev => [
+          ...prev, 
+          { 
+            text: getAIResponse(userInput), 
+            isUser: false 
+          }
+        ]);
+      }, 1000);
+      
+      // Clear input
+      setUserInput("");
     }
   };
-  
+
+  const getAIResponse = (input: string): string => {
+    const lowercaseInput = input.toLowerCase();
+    
+    if (lowercaseInput.includes("preservative") || lowercaseInput.includes("additive")) {
+      return "Preservatives are substances added to foods to prevent spoilage. At JustTrue, we avoid artificial preservatives and focus on natural preservation methods.";
+    } else if (lowercaseInput.includes("sugar") || lowercaseInput.includes("sweetener")) {
+      return "Many processed foods contain hidden sugars under different names. JustTrue products have no added refined sugars or artificial sweeteners.";
+    } else if (lowercaseInput.includes("organic")) {
+      return "Organic foods are grown without synthetic pesticides or fertilizers. JustTrue sources ingredients from organic farms whenever possible.";
+    } else if (lowercaseInput.includes("product") || lowercaseInput.includes("recommend")) {
+      return "Based on your interest in healthy foods, I'd recommend trying our JustMilk or JustFruits products - they have no preservatives and are sourced from local farms!";
+    } else {
+      return "That's a great question about nutrition! For more specific information, you can scan any product using our app or browse our educational content.";
+    }
+  };
+
   return (
     <>
-      <button
-        onClick={() => setIsOpen(true)}
-        className={cn(
-          "fixed bottom-4 left-4 z-50 bg-black text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition-all animate-bounce-light",
-          isOpen && "hidden"
-        )}
-        aria-label="Open chat"
+      <div 
+        className={`fixed bottom-24 right-4 z-50 transition-all duration-300 transform ${
+          isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0 pointer-events-none'
+        } bg-white rounded-lg shadow-lg border border-gray-200 w-80 md:w-96`}
       >
-        <MessageSquare size={24} />
-      </button>
-      
-      {isOpen && (
-        <div className={cn(
-          "fixed bottom-4 left-4 z-50 bg-white rounded-lg shadow-xl border border-gray-200 w-80 max-w-[calc(100vw-2rem)] animate-scale-in",
-          className
-        )}>
-          <div className="p-3 border-b border-gray-200 flex items-center justify-between bg-black text-white rounded-t-lg">
-            <h3 className="font-medium">Nutrition Assistant</h3>
-            <Button variant="ghost" size="sm" className="h-auto p-1 text-white hover:bg-white/20" onClick={() => setIsOpen(false)}>
-              <X size={18} />
-              <span className="sr-only">Close</span>
-            </Button>
-          </div>
-          
-          <div className="max-h-80 overflow-y-auto p-3">
-            {messages.map(message => (
-              <div 
-                key={message.id} 
-                className={cn(
-                  "mb-3 p-3 rounded-lg max-w-[85%]",
-                  message.isBot 
-                    ? "bg-gray-100 text-gray-800 mr-auto animate-slide-from-left" 
-                    : "bg-black text-white ml-auto animate-slide-from-right"
-                )}
-              >
-                <p className="text-sm">{message.text}</p>
-                <p className="text-xs opacity-70 mt-1 text-right">
-                  {message.timestamp.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
-                </p>
-              </div>
-            ))}
-            <div ref={bottomRef} />
-          </div>
-          
-          <div className="p-3 border-t border-gray-200 flex">
-            <input
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={handleKeyDown}
-              placeholder="Ask about nutrition..."
-              className="flex-1 text-sm border border-gray-200 rounded-l-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-black"
-            />
-            <button
-              onClick={handleSend}
-              className="bg-black text-white px-3 py-2 rounded-r-md hover:bg-gray-800"
-            >
-              <Send size={18} />
-            </button>
-          </div>
+        <div className="p-3 border-b border-gray-200 bg-black text-white rounded-t-lg flex justify-between items-center">
+          <h3 className="font-medium">Nutrition Assistant</h3>
+          <button onClick={toggleChat} className="text-white hover:text-gray-200">
+            &times;
+          </button>
         </div>
-      )}
+        
+        <div className="h-80 overflow-y-auto p-3 flex flex-col space-y-2">
+          {messages.map((msg, idx) => (
+            <div 
+              key={idx} 
+              className={`max-w-3/4 p-3 rounded-lg ${
+                msg.isUser 
+                  ? 'bg-orange-500 text-white ml-auto' 
+                  : 'bg-gray-100 text-gray-800 mr-auto'
+              }`}
+            >
+              {msg.text}
+            </div>
+          ))}
+          <div ref={messagesEndRef} />
+        </div>
+        
+        <form onSubmit={handleSubmit} className="p-3 border-t border-gray-200 flex">
+          <Input
+            value={userInput}
+            onChange={(e) => setUserInput(e.target.value)}
+            placeholder="Ask about ingredients or nutrition..."
+            className="flex-1 rounded-r-none"
+          />
+          <Button type="submit" className="rounded-l-none bg-orange-500 hover:bg-orange-600">
+            <ArrowRight size={18} />
+          </Button>
+        </form>
+      </div>
+      
+      <button 
+        onClick={toggleChat}
+        className="fixed bottom-6 right-6 z-50 bg-black text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition-all"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </button>
     </>
   );
 };

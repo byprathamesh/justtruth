@@ -10,9 +10,10 @@ interface ProductCardProps {
   product: Product;
   className?: string;
   featured?: boolean;
+  style?: React.CSSProperties;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product, className, featured }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product, className, featured, style }) => {
   const image = productImages[product.id] || "/placeholder.svg";
   
   const preservativeColor = {
@@ -29,6 +30,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, className, featured 
         featured ? "transform hover:scale-[1.02]" : "",
         className
       )}
+      style={style}
     >
       <div className="relative aspect-square bg-gray-100">
         <img 

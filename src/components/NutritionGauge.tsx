@@ -15,7 +15,7 @@ const NutritionGauge: React.FC<NutritionGaugeProps> = ({
   max, 
   label, 
   className,
-  colorClass = "bg-black" 
+  colorClass = "bg-orange-500" 
 }) => {
   const percentage = (value / max) * 100;
   
