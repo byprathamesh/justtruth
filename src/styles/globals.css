@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Mobile-First Styles */
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased text-base;
+  }
+
+  /* Responsive Typography */
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl lg:text-3xl font-bold;
+  }
+
+  p {
+    @apply text-base md:text-lg;
+  }
+}
+
+/* Custom Animations */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+
+  .animate-slide-down {
+    animation: slideDown 0.3s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile-First Container Padding */
+.container {
+  @apply px-4 md:px-6 lg:px-8;
+}
+
+/* Mobile Touch Targets */
+button, 
+a {
+  @apply min-h-[44px] min-w-[44px];
+}
+
+/* Improved Mobile Form Elements */
+input,
+select,
+textarea {
+  @apply text-base md:text-sm;
+  @apply px-4 py-2;
+  @apply rounded-lg;
+  @apply w-full;
+  @apply appearance-none;
+}
+
+/* Mobile-Friendly Cards */
+.card {
+  @apply bg-white rounded-xl shadow-sm;
+  @apply p-4 md:p-6;
+  @apply transition-all duration-300;
+}
+
+/* Mobile Grid System */
+.grid-responsive {
+  @apply grid;
+  @apply grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
+  @apply gap-4 md:gap-6;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  @apply fixed inset-0 z-50;
+  @apply bg-white dark:bg-gray-900;
+  @apply transform transition-transform duration-300;
+}
+
+/* Mobile-Friendly Spacing */
+.section {
+  @apply py-8 md:py-12 lg:py-16;
+}
+
+/* Mobile-First Images */
+.responsive-img {
+  @apply w-full h-auto;
+  @apply object-cover;
+  @apply rounded-lg;
+}
+
+/* Mobile-Friendly Lists */
+.list-item {
+  @apply flex items-start space-x-3;
+  @apply py-2;
+}
+
+/* Mobile Touch Feedback */
+.touch-feedback {
+  @apply active:scale-95;
+  @apply transition-transform duration-150;
+}
+
+/* Mobile-First Tables */
+.table-responsive {
+  @apply w-full;
+  @apply overflow-x-auto;
+  @apply -mx-4 md:mx-0;
+  @apply shadow-sm;
+  @apply rounded-lg;
+}
+
+/* Improved Mobile Scrolling */
+.scroll-container {
+  @apply overflow-auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile-First Buttons */
+.btn {
+  @apply px-4 py-2;
+  @apply rounded-lg;
+  @apply font-medium;
+  @apply transition-all duration-200;
+  @apply flex items-center justify-center;
+  @apply space-x-2;
+  @apply touch-feedback;
+}
+
+/* Mobile-First Hero Sections */
+.hero {
+  @apply min-h-[60vh] md:min-h-[70vh];
+  @apply flex items-center;
+  @apply py-12 md:py-20;
+}
+
+/* Mobile-First Forms */
+.form-group {
+  @apply space-y-2;
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block text-sm font-medium;
+}
+
+.form-input {
+  @apply w-full;
+  @apply rounded-lg;
+  @apply border border-gray-300;
+  @apply px-4 py-2;
+  @apply text-base;
+  @apply transition-colors duration-200;
+} 
