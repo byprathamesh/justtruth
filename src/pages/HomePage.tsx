@@ -13,7 +13,7 @@ const testimonials = [
     id: 1,
     name: "Priya Sharma",
     location: "Mumbai",
-    image: "/placeholder.svg",
+    image: "/images/testimonial1.svg",
     rating: 5,
     text: "Switching to JustTrue milk was the best decision. My kids love it and I can finally feel good about what they're drinking."
   },
@@ -21,7 +21,7 @@ const testimonials = [
     id: 2,
     name: "Rahul Verma",
     location: "Delhi",
-    image: "/placeholder.svg",
+    image: "/images/testimonial2.svg",
     rating: 5,
     text: "The product scanner is incredible! I was shocked to discover how many additives were in my regular groceries."
   },
@@ -29,7 +29,7 @@ const testimonials = [
     id: 3,
     name: "Meena Patel",
     location: "Ahmedabad",
-    image: "/placeholder.svg",
+    image: "/images/testimonial3.svg",
     rating: 4,
     text: "My skin has improved dramatically since switching to JustTrue personal care products. No more irritation!"
   }
@@ -43,12 +43,12 @@ const HomePage: React.FC = () => {
       
       <main className="pt-32 pb-16">
         {/* Hero Section */}
-        <section className="container mx-auto px-4 text-center mb-40">
+        <section className="container mx-auto px-4 text-center mb-40 min-h-screen flex items-center justify-center">
           <div className="flex flex-col items-center justify-center">
             <img 
               src="/logo.svg" 
               alt="JustTrue Logo" 
-              className="w-32 h-32 mb-8"
+              className="w-32 h-32 mb-8 animate-bounce"
             />
             <h1 className="text-6xl md:text-7xl font-bold mb-12">
               <span className="text-black">Know What</span>{" "}
@@ -95,9 +95,9 @@ const HomePage: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="md:w-1/2">
                 <img 
-                  src="/images/vision.jpg" 
+                  src="/images/vision.svg" 
                   alt="Our Vision" 
-                  className="rounded-lg shadow-lg w-full h-[400px] object-cover"
+                  className="rounded-lg shadow-lg w-full h-[400px] object-contain"
                 />
               </div>
               <div className="md:w-1/2">
