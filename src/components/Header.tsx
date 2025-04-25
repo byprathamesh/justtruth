@@ -44,9 +44,9 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-24">
           <Link to="/" className="flex items-center space-x-4">
             <img 
-              src="/placeholder.svg" 
+              src="/logo.svg" 
               alt="JustTrue Logo" 
-              className="h-20 w-auto transition-transform duration-300 hover:scale-105"
+              className="h-16 w-16 transition-transform duration-300 hover:scale-105"
             />
             <span className="text-3xl font-bold">
               <span className="text-black">Just</span>
