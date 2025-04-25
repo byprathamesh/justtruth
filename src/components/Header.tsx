@@ -43,11 +43,6 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-24">
           <Link to="/" className="flex items-center space-x-4">
-            <img 
-              src="/placeholder.svg" 
-              alt="JustTrue Logo" 
-              className="h-8 w-auto"
-            />
             <span className="text-3xl font-bold">
               <span className="text-black">Just</span>
               <span className="text-orange-500">True</span>
