@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -6,13 +5,13 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-white border-t border-gray-200 mt-20">
       <div className="container mx-auto px-4 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="font-bold text-lg mb-4">JustBrand</h3>
-            <p className="text-gray-600 mb-4">
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="mb-8">
+            <h3 className="font-bold text-2xl mb-4">JustBrand</h3>
+            <p className="text-gray-600 mb-6">
               Making nutrition transparency accessible for everyone.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex justify-center space-x-6">
               <a href="#" className="text-gray-500 hover:text-black">
                 <span className="sr-only">Instagram</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -33,41 +32,11 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-          <div>
-            <h3 className="font-bold text-lg mb-4">Products</h3>
-            <ul className="space-y-2">
-              <li><Link to="/category/dairy" className="text-gray-600 hover:text-black">Dairy Products</Link></li>
-              <li><Link to="/category/snacks" className="text-gray-600 hover:text-black">Snacks</Link></li>
-              <li><Link to="/category/beverages" className="text-gray-600 hover:text-black">Beverages</Link></li>
-              <li><Link to="/category/bread" className="text-gray-600 hover:text-black">Bread & Bakery</Link></li>
-              <li><Link to="/category/sweets" className="text-gray-600 hover:text-black">Sweets</Link></li>
-            </ul>
+          <div className="border-t border-gray-200 pt-8">
+            <p className="text-gray-500 text-sm">
+              © {new Date().getFullYear()} JustBrand. All rights reserved.
+            </p>
           </div>
-          <div>
-            <h3 className="font-bold text-lg mb-4">Learn</h3>
-            <ul className="space-y-2">
-              <li><Link to="/education" className="text-gray-600 hover:text-black">Educational Content</Link></li>
-              <li><Link to="/compare" className="text-gray-600 hover:text-black">Compare Products</Link></li>
-              <li><Link to="/scan" className="text-gray-600 hover:text-black">Scan Products</Link></li>
-              <li><Link to="/blog" className="text-gray-600 hover:text-black">Nutrition Blog</Link></li>
-              <li><Link to="/faq" className="text-gray-600 hover:text-black">FAQs</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg mb-4">About</h3>
-            <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-600 hover:text-black">Our Mission</Link></li>
-              <li><Link to="/contact" className="text-gray-600 hover:text-black">Contact Us</Link></li>
-              <li><Link to="/team" className="text-gray-600 hover:text-black">Our Team</Link></li>
-              <li><Link to="/careers" className="text-gray-600 hover:text-black">Careers</Link></li>
-              <li><Link to="/press" className="text-gray-600 hover:text-black">Press</Link></li>
-            </ul>
-          </div>
-        </div>
-        <div className="mt-10 border-t border-gray-200 pt-10">
-          <p className="text-gray-500 text-center text-sm">
-            © {new Date().getFullYear()} JustBrand. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>
