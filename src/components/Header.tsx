@@ -49,24 +49,7 @@ const Header: React.FC = () => {
             </span>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/about" className="text-gray-800 hover:text-orange-500 transition-colors">About Us</Link>
-            <Link to="/products" className="text-gray-800 hover:text-orange-500 transition-colors">Products</Link>
-          </div>
-
           <div className="flex items-center">
-            <Sheet>
-              <SheetTrigger asChild className="block md:hidden mr-4">
-                <Button variant="outline" size="sm">Menu</Button>
-              </SheetTrigger>
-              <SheetContent side="right">
-                <div className="flex flex-col space-y-4 mt-8">
-                  <Link to="/about" className="text-gray-800 hover:text-orange-500 transition-colors">About Us</Link>
-                  <Link to="/products" className="text-gray-800 hover:text-orange-500 transition-colors">Products</Link>
-                </div>
-              </SheetContent>
-            </Sheet>
-            
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="outline" className="border-black text-black hover:bg-gray-100 flex items-center space-x-2">

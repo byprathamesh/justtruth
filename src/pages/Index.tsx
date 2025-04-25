@@ -392,23 +392,51 @@ const Index = () => {
             ))}
           </div>
 
-          {/* Related Sections Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            {/* Our Mission Preview */}
+          {/* Main Navigation Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* About Us Section */}
             <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-bold mb-4">About Us</h3>
               <p className="text-gray-600 mb-6">
-                Discover our commitment to transparency and quality in food products.
-                Learn about our journey and values that drive us to create better food choices.
+                Learn about our commitment to transparency, our team, and how we're
+                revolutionizing the food industry with honest ingredients.
               </p>
-              <Link to="/mission">
+              <Link to="/about">
                 <Button className="w-full bg-black hover:bg-gray-800">
-                  Learn More About Our Mission
+                  Discover Our Story
                 </Button>
               </Link>
             </div>
 
-            {/* Industry Truth Preview */}
+            {/* Products Section */}
+            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold mb-4">Our Products</h3>
+              <p className="text-gray-600 mb-6">
+                Explore our range of preservative-free, honest products made with
+                ingredients you can trust and understand.
+              </p>
+              <Link to="/products">
+                <Button className="w-full bg-black hover:bg-gray-800">
+                  View Products
+                </Button>
+              </Link>
+            </div>
+
+            {/* Our Mission Section */}
+            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+              <p className="text-gray-600 mb-6">
+                Discover our commitment to transparency and quality in food products.
+                Learn about our journey and values.
+              </p>
+              <Link to="/mission">
+                <Button className="w-full bg-black hover:bg-gray-800">
+                  Learn About Our Mission
+                </Button>
+              </Link>
+            </div>
+
+            {/* Industry Truth Section */}
             <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
               <h3 className="text-2xl font-bold mb-4">Industry Truth</h3>
               <p className="text-gray-600 mb-6">
@@ -422,7 +450,7 @@ const Index = () => {
               </Link>
             </div>
 
-            {/* Blog Preview */}
+            {/* Blog Section */}
             <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
               <h3 className="text-2xl font-bold mb-4">Latest from Our Blog</h3>
               <p className="text-gray-600 mb-6">
@@ -436,7 +464,7 @@ const Index = () => {
               </Link>
             </div>
 
-            {/* More Testimonials Preview */}
+            {/* More Testimonials Section */}
             <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
               <h3 className="text-2xl font-bold mb-4">More Success Stories</h3>
               <p className="text-gray-600 mb-6">
