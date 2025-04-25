@@ -47,25 +47,25 @@ const categories = [
   {
     id: 1,
     name: "Dairy Products",
-    image: "/images/product-milk.svg",
+    image: "/images/dairy.svg",
     count: 12
   },
   {
     id: 2,
     name: "Snacks",
-    image: "/images/just-chips.svg",
+    image: "/images/snacks.svg",
     count: 8
   },
   {
     id: 3,
     name: "Beverages",
-    image: "/images/product-milk.svg",
+    image: "/images/beverages.svg",
     count: 6
   },
   {
     id: 4,
     name: "Bread & Bakery",
-    image: "/images/product-bread.svg",
+    image: "/images/bakery.svg",
     count: 4
   }
 ];

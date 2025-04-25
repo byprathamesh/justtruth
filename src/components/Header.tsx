@@ -5,7 +5,7 @@ const Header: React.FC = () => {
   return (
     <header className="py-4 px-6">
       <div className="flex justify-between items-center">
-        <Link to="/" className="text-3xl md:text-4xl font-bold hover:opacity-90 transition-opacity">
+        <Link to="/" className="text-4xl md:text-5xl font-bold hover:opacity-90 transition-opacity">
           <span className="text-black">Just</span>
           <span className="text-orange-500">Truth</span>
         </Link>
