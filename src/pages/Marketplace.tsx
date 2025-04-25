@@ -81,11 +81,7 @@ const features = [
 const Marketplace: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50/30 to-white">
-      <div className="bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto">
-          <Header />
-        </div>
-      </div>
+      <Header />
       
       <main className="max-w-6xl mx-auto px-4 py-8">
         {/* Hero Section */}
