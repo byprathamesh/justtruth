@@ -15,6 +15,11 @@ import CategoryPage from "./pages/CategoryPage";
 import AboutPage from "./pages/AboutPage";
 import MarketplacePage from "./pages/MarketplacePage";
 import ComparePage from "./pages/ComparePage";
+import MissionPage from "./pages/MissionPage";
+import TestimonialsPage from "./pages/TestimonialsPage";
+import IndustryTruthPage from "./pages/IndustryTruthPage";
+import BlogPage from "./pages/BlogPage";
+import SignUpPage from "./pages/SignUpPage";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +40,11 @@ const App = () => (
           <Route path="/category/:categoryId" element={<CategoryPage />} />
           <Route path="/marketplace" element={<MarketplacePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/mission" element={<MissionPage />} />
+          <Route path="/testimonials" element={<TestimonialsPage />} />
+          <Route path="/industry-truth" element={<IndustryTruthPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
