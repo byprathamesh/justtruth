@@ -71,7 +71,7 @@ const MarketplacePage: React.FC = () => {
                     key={product.id} 
                     product={{
                       ...product,
-                      image: "/images/just-placeholder.svg"
+                      image: `/images/${product.category}.svg`
                     }}
                     className="animate-slide-in opacity-0 bg-white hover:shadow-xl transition-all duration-300"
                     style={{ animationDelay: `${idx * 0.05}s`, animationFillMode: 'forwards' }}
@@ -87,7 +87,7 @@ const MarketplacePage: React.FC = () => {
                     key={product.id} 
                     product={{
                       ...product,
-                      image: "/images/just-placeholder.svg"
+                      image: `/images/${product.category}.svg`
                     }}
                     className="animate-slide-in opacity-0 bg-white hover:shadow-xl transition-all duration-300"
                     style={{ animationDelay: `${idx * 0.05}s`, animationFillMode: 'forwards' }}
@@ -103,7 +103,7 @@ const MarketplacePage: React.FC = () => {
                     key={product.id} 
                     product={{
                       ...product,
-                      image: "/images/just-placeholder.svg"
+                      image: `/images/${product.category}.svg`
                     }}
                     className="animate-slide-in opacity-0 bg-white hover:shadow-xl transition-all duration-300"
                     style={{ animationDelay: `${idx * 0.05}s`, animationFillMode: 'forwards' }}
@@ -147,7 +147,7 @@ const MarketplacePage: React.FC = () => {
             <div className="md:w-1/2">
               <div className="relative">
                 <img 
-                  src="/images/just-placeholder.svg" 
+                  src="/images/just-truth-logo.svg" 
                   alt="JustTrue Products" 
                   className="rounded-lg w-full h-64 object-contain shadow-lg transition-transform duration-300 hover:scale-105"
                 />
@@ -171,7 +171,7 @@ const MarketplacePage: React.FC = () => {
               >
                 <div className="aspect-square bg-gray-100">
                   <img 
-                    src="/images/just-placeholder.svg"
+                    src={`/images/${category.id}.svg`}
                     alt={category.name}
                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                   />
