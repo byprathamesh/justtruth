@@ -59,12 +59,14 @@ const trendingComparisons = [
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50/30 to-white">
-      <div className="max-w-6xl mx-auto">
-        <Header />
+      <div className="bg-white">
+        <div className="max-w-6xl mx-auto">
+          <Header />
+        </div>
       </div>
       <ChatBot />
       
-      <main className="pt-20 pb-16">
+      <main className="pt-16 pb-16">
         {/* Hero Section - Full Screen */}
         <section className="min-h-[80vh] flex items-center justify-center px-4">
           <div className="text-center max-w-4xl mx-auto">

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="white"/>
+  <path d="M40 80l120-30v100H40V80z" fill="#FFD700"/>
+  <path d="M50 90l100-25v75H50V90z" fill="#FFA500"/>
+  <circle cx="70" cy="110" r="5" fill="#FFE4B5"/>
+  <circle cx="100" cy="120" r="5" fill="#FFE4B5"/>
+  <circle cx="130" cy="100" r="5" fill="#FFE4B5"/>
+</svg> 
