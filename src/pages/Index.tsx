@@ -356,209 +356,201 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Customer Testimonials and Related Sections */}
+      {/* Customer Testimonials and Related Information */}
       <section className="py-16 px-4 bg-white" id="testimonials">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">Customer Testimonials</h2>
-          <p className="text-gray-600 mb-8">Hear from our customers who have made the switch to preservative-free living</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="bg-gray-50 p-6 rounded-lg shadow-md animate-slide-in opacity-0 hover:shadow-xl transition-all duration-300">
-                <div className="mb-4 relative">
-                  <Quote size={40} className="text-gray-200 absolute -left-2 -top-2" />
-                  <p className="text-gray-700 italic relative z-10">{testimonial.text}</p>
-                </div>
-                
-                <div className="flex items-center mt-6">
-                  <div className="mr-4">
-                    <img 
-                      src="/placeholder.svg" 
-                      alt={testimonial.name} 
-                      className="w-12 h-12 rounded-full object-cover border-2 border-orange-500"
-                    />
+          {/* Testimonials Section */}
+          <div className="mb-20">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">Customer Testimonials</h2>
+            <p className="text-gray-600 mb-8">Hear from our customers who have made the switch to preservative-free living</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {testimonials.map((testimonial) => (
+                <div key={testimonial.id} className="bg-gray-50 p-6 rounded-lg shadow-md animate-slide-in opacity-0 hover:shadow-xl transition-all duration-300">
+                  <div className="mb-4 relative">
+                    <Quote size={40} className="text-gray-200 absolute -left-2 -top-2" />
+                    <p className="text-gray-700 italic relative z-10">{testimonial.text}</p>
                   </div>
-                  <div>
-                    <h4 className="font-bold">{testimonial.name}</h4>
-                    <p className="text-gray-500 text-sm">{testimonial.location}</p>
-                    <div className="flex mt-1">
-                      {Array.from({ length: testimonial.rating }).map((_, i) => (
-                        <Star key={i} size={12} className="fill-orange-500 text-orange-500" />
-                      ))}
+                  
+                  <div className="flex items-center mt-6">
+                    <div className="mr-4">
+                      <img 
+                        src="/placeholder.svg" 
+                        alt={testimonial.name} 
+                        className="w-12 h-12 rounded-full object-cover border-2 border-orange-500"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="font-bold">{testimonial.name}</h4>
+                      <p className="text-gray-500 text-sm">{testimonial.location}</p>
+                      <div className="flex mt-1">
+                        {Array.from({ length: testimonial.rating }).map((_, i) => (
+                          <Star key={i} size={12} className="fill-orange-500 text-orange-500" />
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Main Navigation Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* About Us Section */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-4">About Us</h3>
-              <p className="text-gray-600 mb-6">
-                Learn about our commitment to transparency, our team, and how we're
-                revolutionizing the food industry with honest ingredients.
-              </p>
-              <Link to="/about">
-                <Button className="w-full bg-black hover:bg-gray-800">
-                  Discover Our Story
-                </Button>
-              </Link>
-            </div>
-
-            {/* Products Section */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-4">Our Products</h3>
-              <p className="text-gray-600 mb-6">
-                Explore our range of preservative-free, honest products made with
-                ingredients you can trust and understand.
-              </p>
-              <Link to="/products">
-                <Button className="w-full bg-black hover:bg-gray-800">
-                  View Products
-                </Button>
-              </Link>
-            </div>
-
-            {/* Our Mission Section */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-              <p className="text-gray-600 mb-6">
-                Discover our commitment to transparency and quality in food products.
-                Learn about our journey and values.
-              </p>
-              <Link to="/mission">
-                <Button className="w-full bg-black hover:bg-gray-800">
-                  Learn About Our Mission
-                </Button>
-              </Link>
-            </div>
-
-            {/* Industry Truth Section */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-4">Industry Truth</h3>
-              <p className="text-gray-600 mb-6">
-                Uncover the hidden facts about food industry practices and learn how to make
-                informed decisions about your food choices.
-              </p>
-              <Link to="/industry-truth">
-                <Button className="w-full bg-black hover:bg-gray-800">
-                  Explore Industry Insights
-                </Button>
-              </Link>
-            </div>
-
-            {/* Blog Section */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-4">Latest from Our Blog</h3>
-              <p className="text-gray-600 mb-6">
-                Read our latest articles on nutrition, healthy living, and food transparency.
-                Stay informed with expert insights and tips.
-              </p>
-              <Link to="/blog">
-                <Button className="w-full bg-black hover:bg-gray-800">
-                  Visit Our Blog
-                </Button>
-              </Link>
-            </div>
-
-            {/* More Testimonials Section */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-4">More Success Stories</h3>
-              <p className="text-gray-600 mb-6">
-                Read more inspiring stories from our customers who have embraced
-                healthier food choices with JustTrue.
-              </p>
-              <Link to="/testimonials">
-                <Button className="w-full bg-black hover:bg-gray-800">
-                  Read More Testimonials
-                </Button>
-              </Link>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Industry Truth */}
-      <section className="py-16 px-4 bg-gray-50" id="industry-truth">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">Industry Truth</h2>
-          <p className="text-gray-600 mb-8">The food industry often hides uncomfortable truths behind flashy packaging</p>
-          
-          <div className="bg-white p-8 rounded-lg shadow-md mb-8">
-            <div className="flex items-center mb-6">
-              <AlertTriangle size={24} className="text-orange-500 mr-3" />
-              <h3 className="text-2xl font-bold">The Hidden Truth</h3>
-            </div>
-            <p className="text-gray-700 mb-6">
-              Many leading food brands use potentially harmful additives and preservatives that have been linked to various health issues. 
-              These additives help extend shelf life, enhance flavor or appearance, but may come at the cost of your health.
-            </p>
+          {/* Our Mission Section */}
+          <div className="mb-20">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">Our Mission</h2>
+            <p className="text-gray-600 mb-8">Transparency Above All</p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="border border-gray-200 rounded-lg p-4">
-                <h3 className="font-bold text-lg mb-2">Hidden Sugars</h3>
-                <p className="text-gray-700 mb-2">
-                  Sugar can be listed under more than 60 different names on ingredient labels.
-                </p>
-                <p className="text-sm text-orange-600">Found in: Seemingly healthy cereals, yogurts, sauces</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-4">
-                <h3 className="font-bold text-lg mb-2">Artificial Colors</h3>
-                <p className="text-gray-700 mb-2">
-                  Synthetic food dyes have been linked to behavioral issues in children.
-                </p>
-                <p className="text-sm text-orange-600">Found in: Candies, snacks, beverages, even pickles</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-4">
-                <h3 className="font-bold text-lg mb-2">Preservatives</h3>
-                <p className="text-gray-700 mb-2">
-                  Many preservatives are used to extend shelf life at the expense of your health.
-                </p>
-                <p className="text-sm text-orange-600">Found in: Most packaged and processed foods</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Blog */}
-      <section className="py-16 px-4 bg-white" id="blog">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">JustTrue Blog</h2>
-          <p className="text-gray-600 mb-8">Insights on nutrition, transparency, and healthy living</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.slice(0, 3).map((post) => (
-              <div key={post.id} className="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div>
                 <img 
                   src="/placeholder.svg" 
-                  alt={post.title}
-                  className="w-full h-48 object-cover"
+                  alt="Pure Ingredients" 
+                  className="w-full h-64 object-cover rounded-lg shadow-md"
                 />
-                <div className="p-6">
-                  <div className="flex items-center text-sm text-gray-500 mb-2">
-                    <Calendar size={14} className="mr-2" />
-                    <span>{post.date}</span>
-                    <span className="mx-2">•</span>
-                    <User size={14} className="mr-2" />
-                    <span>{post.author}</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{post.title}</h3>
-                  <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-orange-500">{post.category}</span>
-                    <span className="text-sm text-gray-500">{post.readTime}</span>
-                  </div>
+              </div>
+              <div>
+                <p className="text-gray-700 mb-4">
+                  At JustTrue, our mission is simple yet revolutionary: to bring complete transparency to food products. 
+                  We believe you deserve to know exactly what you're eating, without hidden ingredients or misleading labels.
+                </p>
+                <p className="text-gray-700">
+                  We're committed to providing you with food products that contain only the ingredients you can pronounce, 
+                  understand, and trust - nothing more, nothing less.
+                </p>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-orange-50 p-6 rounded-lg transform transition hover:scale-105">
+                <h3 className="font-bold text-lg mb-2">Honesty</h3>
+                <p className="text-gray-700">
+                  We are completely transparent about what's in our products, where they come from, and how they're made.
+                </p>
+              </div>
+              <div className="bg-orange-50 p-6 rounded-lg transform transition hover:scale-105">
+                <h3 className="font-bold text-lg mb-2">Purity</h3>
+                <p className="text-gray-700">
+                  We never use artificial preservatives, flavors, or colors in any of our products.
+                </p>
+              </div>
+              <div className="bg-orange-50 p-6 rounded-lg transform transition hover:scale-105">
+                <h3 className="font-bold text-lg mb-2">Sustainability</h3>
+                <p className="text-gray-700">
+                  We source locally whenever possible and ensure our packaging is environmentally friendly.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Industry Truth Section */}
+          <div className="mb-20">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">Industry Truth</h2>
+            <p className="text-gray-600 mb-8">The food industry often hides uncomfortable truths behind flashy packaging</p>
+            
+            <div className="bg-white p-8 rounded-lg shadow-md mb-8">
+              <div className="flex items-center mb-6">
+                <AlertTriangle size={24} className="text-orange-500 mr-3" />
+                <h3 className="text-2xl font-bold">The Hidden Truth</h3>
+              </div>
+              <p className="text-gray-700 mb-6">
+                Many leading food brands use potentially harmful additives and preservatives that have been linked to various health issues. 
+                These additives help extend shelf life, enhance flavor or appearance, but may come at the cost of your health.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <h3 className="font-bold text-lg mb-2">Hidden Sugars</h3>
+                  <p className="text-gray-700 mb-2">
+                    Sugar can be listed under more than 60 different names on ingredient labels.
+                  </p>
+                  <p className="text-sm text-orange-600">Found in: Seemingly healthy cereals, yogurts, sauces</p>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <h3 className="font-bold text-lg mb-2">Artificial Colors</h3>
+                  <p className="text-gray-700 mb-2">
+                    Synthetic food dyes have been linked to behavioral issues in children.
+                  </p>
+                  <p className="text-sm text-orange-600">Found in: Candies, snacks, beverages, even pickles</p>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <h3 className="font-bold text-lg mb-2">Preservatives</h3>
+                  <p className="text-gray-700 mb-2">
+                    Many preservatives are used to extend shelf life at the expense of your health.
+                  </p>
+                  <p className="text-sm text-orange-600">Found in: Most packaged and processed foods</p>
                 </div>
               </div>
-            ))}
+            </div>
+          </div>
+
+          {/* Blog Section */}
+          <div className="mb-20">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">Latest from Our Blog</h2>
+            <p className="text-gray-600 mb-8">Insights on nutrition, transparency, and healthy living</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.slice(0, 3).map((post) => (
+                <div key={post.id} className="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                  <img 
+                    src="/placeholder.svg" 
+                    alt={post.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-6">
+                    <div className="flex items-center text-sm text-gray-500 mb-2">
+                      <Calendar size={14} className="mr-2" />
+                      <span>{post.date}</span>
+                      <span className="mx-2">•</span>
+                      <User size={14} className="mr-2" />
+                      <span>{post.author}</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{post.title}</h3>
+                    <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-orange-500">{post.category}</span>
+                      <span className="text-sm text-gray-500">{post.readTime}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* About Us Section */}
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">About Us</h2>
+            <p className="text-gray-600 mb-8">Learn about our commitment to transparency and quality</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <img 
+                  src="/placeholder.svg" 
+                  alt="Our Team" 
+                  className="w-full h-64 object-cover rounded-lg shadow-md mb-4"
+                />
+                <h3 className="text-xl font-bold mb-2">Our Team</h3>
+                <p className="text-gray-700">
+                  We're a dedicated team of food scientists, nutritionists, and industry experts
+                  committed to revolutionizing the food industry through transparency and education.
+                </p>
+              </div>
+              <div>
+                <img 
+                  src="/placeholder.svg" 
+                  alt="Our Values" 
+                  className="w-full h-64 object-cover rounded-lg shadow-md mb-4"
+                />
+                <h3 className="text-xl font-bold mb-2">Our Values</h3>
+                <p className="text-gray-700">
+                  Built on the foundation of honesty, transparency, and consumer empowerment,
+                  we strive to make healthy eating accessible and understandable for everyone.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );
