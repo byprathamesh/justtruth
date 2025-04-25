@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -56,10 +55,10 @@ const Header: React.FC = () => {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/mission" className="text-gray-800 hover:text-orange-500 transition-colors">Our Mission</Link>
-            <Link to="/testimonials" className="text-gray-800 hover:text-orange-500 transition-colors">Testimonials</Link>
-            <Link to="/industry-truth" className="text-gray-800 hover:text-orange-500 transition-colors">Industry Truth</Link>
-            <Link to="/blog" className="text-gray-800 hover:text-orange-500 transition-colors">Blog</Link>
+            <a href="#mission" className="text-gray-800 hover:text-orange-500 transition-colors">Our Mission</a>
+            <a href="#testimonials" className="text-gray-800 hover:text-orange-500 transition-colors">Testimonials</a>
+            <a href="#industry-truth" className="text-gray-800 hover:text-orange-500 transition-colors">Industry Truth</a>
+            <a href="#blog" className="text-gray-800 hover:text-orange-500 transition-colors">Blog</a>
           </div>
 
           <div className="flex items-center">
@@ -69,10 +68,10 @@ const Header: React.FC = () => {
               </SheetTrigger>
               <SheetContent side="right">
                 <div className="flex flex-col space-y-4 mt-8">
-                  <Link to="/mission" className="text-gray-800 hover:text-orange-500 transition-colors">Our Mission</Link>
-                  <Link to="/testimonials" className="text-gray-800 hover:text-orange-500 transition-colors">Testimonials</Link>
-                  <Link to="/industry-truth" className="text-gray-800 hover:text-orange-500 transition-colors">Industry Truth</Link>
-                  <Link to="/blog" className="text-gray-800 hover:text-orange-500 transition-colors">Blog</Link>
+                  <a href="#mission" className="text-gray-800 hover:text-orange-500 transition-colors">Our Mission</a>
+                  <a href="#testimonials" className="text-gray-800 hover:text-orange-500 transition-colors">Testimonials</a>
+                  <a href="#industry-truth" className="text-gray-800 hover:text-orange-500 transition-colors">Industry Truth</a>
+                  <a href="#blog" className="text-gray-800 hover:text-orange-500 transition-colors">Blog</a>
                 </div>
               </SheetContent>
             </Sheet>
