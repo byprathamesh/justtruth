@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Camera, Upload, Search, Quote, Star, Calendar, User, AlertTriangle } from "lucide-react";
+import { Camera, Upload, Search, Quote, Star, Calendar, User, AlertTriangle, CheckCircle2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
@@ -41,6 +41,60 @@ const Index = () => {
   const comparisonProducts = currentComparison.products.map(id => getProductById(id)!);
   
   const justBrandProducts = getJustBrandProducts();
+  
+  const testimonials = [
+    {
+      id: 1,
+      name: "Sarah Johnson",
+      location: "New York, NY",
+      text: "I've been using JustTrue products for 6 months now and the difference in my health is remarkable. No more artificial ingredients, just pure, natural food.",
+      rating: 5
+    },
+    {
+      id: 2,
+      name: "Michael Chen",
+      location: "San Francisco, CA",
+      text: "As someone with food sensitivities, JustTrue's transparent labeling has been a game-changer. I can finally trust what I'm eating.",
+      rating: 5
+    },
+    {
+      id: 3,
+      name: "Emily Rodriguez",
+      location: "Miami, FL",
+      text: "The quality of ingredients in JustTrue products is outstanding. I can taste the difference, and my family loves it too!",
+      rating: 5
+    }
+  ];
+
+  const blogPosts = [
+    {
+      id: 1,
+      title: "The Truth About Food Labels",
+      excerpt: "Learn how to read between the lines of food packaging and make informed choices.",
+      date: "March 15, 2024",
+      author: "Dr. Jane Smith",
+      category: "Nutrition",
+      readTime: "5 min read"
+    },
+    {
+      id: 2,
+      title: "Natural vs. Artificial Preservatives",
+      excerpt: "Understanding the difference between natural and artificial food preservation methods.",
+      date: "March 10, 2024",
+      author: "John Doe",
+      category: "Science",
+      readTime: "4 min read"
+    },
+    {
+      id: 3,
+      title: "Eating Clean in a Modern World",
+      excerpt: "Practical tips for maintaining a clean, preservative-free diet in today's busy world.",
+      date: "March 5, 2024",
+      author: "Sarah Johnson",
+      category: "Lifestyle",
+      readTime: "6 min read"
+    }
+  ];
   
   return (
     <div className="min-h-screen bg-white">
@@ -546,6 +600,191 @@ const Index = () => {
                   we strive to make healthy eating accessible and understandable for everyone.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Vision Section */}
+      <section className="py-16 px-4 bg-white" id="vision">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2">Our Vision</h2>
+          <p className="text-gray-600 mb-8">Building a future where food transparency is the norm, not the exception</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div>
+              <img 
+                src="/placeholder.svg" 
+                alt="Our Vision" 
+                className="w-full h-64 object-cover rounded-lg shadow-md"
+              />
+            </div>
+            <div>
+              <p className="text-gray-700 mb-4">
+                At JustTrue, we envision a world where every consumer can make informed choices about their food. 
+                A world where ingredient lists are clear, honest, and free from hidden additives.
+              </p>
+              <p className="text-gray-700 mb-6">
+                Our vision extends beyond just our products - we're working to transform the entire food industry 
+                through education, advocacy, and by setting new standards for transparency.
+              </p>
+              <Link to="/vision">
+                <Button variant="outline" className="border-black text-black hover:bg-gray-100">
+                  Learn More About Our Vision
+                </Button>
+              </Link>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-orange-50 p-6 rounded-lg transform transition hover:scale-105">
+              <h3 className="font-bold text-lg mb-2">Transparency</h3>
+              <p className="text-gray-700">
+                Complete ingredient disclosure and honest labeling for all food products.
+              </p>
+            </div>
+            <div className="bg-orange-50 p-6 rounded-lg transform transition hover:scale-105">
+              <h3 className="font-bold text-lg mb-2">Education</h3>
+              <p className="text-gray-700">
+                Empowering consumers with knowledge about food ingredients and their impact.
+              </p>
+            </div>
+            <div className="bg-orange-50 p-6 rounded-lg transform transition hover:scale-105">
+              <h3 className="font-bold text-lg mb-2">Innovation</h3>
+              <p className="text-gray-700">
+                Developing new ways to make healthy, preservative-free food accessible to all.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Industry Truth Section */}
+      <section className="py-16 px-4 bg-gray-50" id="industry-truth">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2">Industry Truth</h2>
+          <p className="text-gray-600 mb-8">The food industry often hides uncomfortable truths behind flashy packaging</p>
+          
+          <div className="bg-white p-8 rounded-lg shadow-md mb-8">
+            <div className="flex items-center mb-6">
+              <AlertTriangle size={24} className="text-orange-500 mr-3" />
+              <h3 className="text-2xl font-bold">The Hidden Truth</h3>
+            </div>
+            <p className="text-gray-700 mb-6">
+              Many leading food brands use potentially harmful additives and preservatives that have been linked to various health issues. 
+              These additives help extend shelf life, enhance flavor or appearance, but may come at the cost of your health.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="border border-gray-200 rounded-lg p-4">
+                <h3 className="font-bold text-lg mb-2">Hidden Sugars</h3>
+                <p className="text-gray-700 mb-2">
+                  Sugar can be listed under more than 60 different names on ingredient labels.
+                </p>
+                <p className="text-sm text-orange-600">Found in: Seemingly healthy cereals, yogurts, sauces</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-4">
+                <h3 className="font-bold text-lg mb-2">Artificial Colors</h3>
+                <p className="text-gray-700 mb-2">
+                  Synthetic food dyes have been linked to behavioral issues in children.
+                </p>
+                <p className="text-sm text-orange-600">Found in: Candies, snacks, beverages, even pickles</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-4">
+                <h3 className="font-bold text-lg mb-2">Preservatives</h3>
+                <p className="text-gray-700 mb-2">
+                  Many preservatives are used to extend shelf life at the expense of your health.
+                </p>
+                <p className="text-sm text-orange-600">Found in: Most packaged and processed foods</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link to="/industry-truth">
+              <Button variant="outline" className="border-black text-black hover:bg-gray-100">
+                Learn More About Industry Practices
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 px-4 bg-white" id="why-us">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2">Why Choose JustTrue?</h2>
+          <p className="text-gray-600 mb-8">The difference is in our commitment to your health and transparency</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div>
+              <h3 className="text-xl font-bold mb-4">Our Promise to You</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <CheckCircle2 className="text-green-500 mr-3 mt-1" />
+                  <div>
+                    <h4 className="font-semibold">100% Natural Ingredients</h4>
+                    <p className="text-gray-600">No artificial additives, colors, or preservatives</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="text-green-500 mr-3 mt-1" />
+                  <div>
+                    <h4 className="font-semibold">Complete Transparency</h4>
+                    <p className="text-gray-600">Clear, honest labeling you can trust</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="text-green-500 mr-3 mt-1" />
+                  <div>
+                    <h4 className="font-semibold">Health-First Approach</h4>
+                    <p className="text-gray-600">Products designed with your well-being in mind</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <img 
+                src="/placeholder.svg" 
+                alt="Why Choose Us" 
+                className="w-full h-64 object-cover rounded-lg shadow-md"
+              />
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="font-bold text-lg mb-2">Quality Assurance</h3>
+              <p className="text-gray-700 mb-4">
+                Rigorous testing and quality control processes ensure the highest standards.
+              </p>
+              <Link to="/quality">
+                <Button variant="link" className="text-orange-500 p-0">
+                  Learn about our quality standards →
+                </Button>
+              </Link>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="font-bold text-lg mb-2">Sustainability</h3>
+              <p className="text-gray-700 mb-4">
+                Environmentally responsible sourcing and packaging practices.
+              </p>
+              <Link to="/sustainability">
+                <Button variant="link" className="text-orange-500 p-0">
+                  Our sustainability efforts →
+                </Button>
+              </Link>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="font-bold text-lg mb-2">Community Impact</h3>
+              <p className="text-gray-700 mb-4">
+                Supporting local farmers and promoting food education initiatives.
+              </p>
+              <Link to="/community">
+                <Button variant="link" className="text-orange-500 p-0">
+                  Our community work →
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
